@@ -1,702 +1,702 @@
 <!DOCTYPE html>
 <html lang="fi" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sporttikuja – Kuntosali Herttoniemessä</title>
-  
-  <!-- Современные нео-гротески Plus Jakarta Sans и Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            display: ['"Plus Jakarta Sans"', 'sans-serif'],
-          },
-          colors: {
-            primary: '#ff5500',
-            'primary-hover': '#e04a00',
-            dark: {
-              base: '#070709',
-              card: '#0f1015',
-              surface: '#151720',
-              border: '#1f2330'
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sporttikuja – Kuntosali Herttoniemessä</title>
+  
+  <!-- Современные нео-гротески Plus Jakarta Sans и Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            primary: '#ff5500',
+            'primary-hover': '#e04a00',
+            dark: {
+              base: '#070709',
+              card: '#0f1015',
+              surface: '#151720',
+              border: '#1f2330'
+            }
+          }
+        }
+      }
+    }
+  </script>
 
-  <style>
-    body {
-      background-color: #070709;
-      color: #94a3b8;
-      font-family: 'Inter', sans-serif;
-    }
-    
-    /* Слайды с плавным переходом и легким зумом */
-    .hero-slide {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), transform 6s cubic-bezier(0.25, 1, 0.5, 1);
-      transform: scale(1.05);
-      will-change: opacity, transform;
-    }
-    .hero-slide.active {
-      opacity: 1;
-      transform: scale(1);
-    }
-    
-    /* Затемнение для фото */
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(7,7,9,0.75) 0%, rgba(7,7,9,0.5) 40%, rgba(7,7,9,0.95) 100%),
-                  radial-gradient(circle at center, rgba(7,7,9,0.3) 0%, rgba(7,7,9,0.85) 100%);
-    }
+  <style>
+    body {
+      background-color: #070709;
+      color: #94a3b8;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Слайды с плавным переходом и легким зумом */
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), transform 6s cubic-bezier(0.25, 1, 0.5, 1);
+      transform: scale(1.05);
+      will-change: opacity, transform;
+    }
+    .hero-slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    /* Затемнение для фото */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(7,7,9,0.75) 0%, rgba(7,7,9,0.5) 40%, rgba(7,7,9,0.95) 100%),
+                  radial-gradient(circle at center, rgba(7,7,9,0.3) 0%, rgba(7,7,9,0.85) 100%);
+    }
 
-    /* Подсветка слов при скролле */
-    .reveal-word {
-      opacity: 0.22;
-      transition: opacity 0.35s ease, color 0.35s ease;
-      display: inline-block;
-      margin-right: 0.28em;
-    }
-    .reveal-word.highlighted {
-      opacity: 1;
-      color: #ffffff;
-    }
-    .reveal-word.highlighted-primary {
-      opacity: 1;
-      color: #ff5500;
-    }
-    
-    .tech-grid {
-      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-      background-size: 28px 28px;
-    }
-  </style>
+    /* Подсветка слов при скролле */
+    .reveal-word {
+      opacity: 0.22;
+      transition: opacity 0.35s ease, color 0.35s ease;
+      display: inline-block;
+      margin-right: 0.28em;
+    }
+    .reveal-word.highlighted {
+      opacity: 1;
+      color: #ffffff;
+    }
+    .reveal-word.highlighted-primary {
+      opacity: 1;
+      color: #ff5500;
+    }
+    
+    .tech-grid {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+  </style>
 </head>
 <body class="selection:bg-primary selection:text-white antialiased overflow-x-hidden">
 
-  <!-- ВЕРХНЯЯ ПОЛОСА -->
-  <div class="border-b border-dark-border bg-dark-base/90 py-2.5 px-4 text-xs">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-slate-400">
-      <div class="flex items-center gap-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span class="text-slate-300 font-medium tracking-wide">Kulkukortilla treeniä joka päivä klo 05:00 – 24:00</span>
-      </div>
-      <div class="italic text-slate-400 hidden sm:block">
-        ”Pidä huolta temppelistäsi, niin temppeli pitää huolta sinusta”.
-      </div>
-      <div class="flex items-center gap-4 text-slate-400">
-        <a href="tel:0458855068" class="hover:text-primary transition flex items-center gap-1.5">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-primary"></i> 045 8855 068
-        </a>
-        <span class="text-dark-border">|</span>
-        <span>Herttoniemenranta, HKI</span>
-      </div>
-    </div>
-  </div>
+  <!-- ВЕРХНЯЯ ПОЛОСА -->
+  <div class="border-b border-dark-border bg-dark-base/90 py-2.5 px-4 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-slate-300 font-medium tracking-wide">Kulkukortilla treeniä joka päivä klo 05:00 – 24:00</span>
+      </div>
+      <div class="italic text-slate-400 hidden sm:block">
+        ”Pidä huolta temppelistäsi, niin temppeli pitää huolta sinusta”.
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="tel:0458855068" class="hover:text-primary transition flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-primary"></i> 045 8855 068
+        </a>
+        <span class="text-dark-border">|</span>
+        <span>Herttoniemenranta, HKI</span>
+      </div>
+    </div>
+  </div>
 
-  <!-- ШАПКА: ЛОГОТИП И НАВИГАЦИЯ -->
-  <header class="sticky top-0 z-50 bg-dark-base/95 backdrop-blur-md border-b border-dark-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-      
-      <!-- Логотип Sporttikuja 1985 -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="border-2 border-primary bg-dark-card px-3 py-1.5 rounded text-center transition group-hover:border-white">
-          <div class="text-[9px] tracking-[0.25em] text-primary font-bold">★ HELSINKI ★</div>
-          <div class="font-display font-extrabold text-lg text-white tracking-wider leading-none">SPORTTIKUJA</div>
-          <div class="text-[8px] text-slate-400 tracking-widest uppercase">ESTB 1985</div>
-        </div>
-      </a>
+  <!-- ШАПКА: ЛОГОТИП И НАВИГАЦИЯ -->
+  <header class="sticky top-0 z-50 bg-dark-base/95 backdrop-blur-md border-b border-dark-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <!-- Логотип Sporttikuja 1985 -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="border-2 border-primary bg-dark-card px-3 py-1.5 rounded text-center transition group-hover:border-white">
+          <div class="text-[9px] tracking-[0.25em] text-primary font-bold">★ HELSINKI ★</div>
+          <div class="font-display font-extrabold text-lg text-white tracking-wider leading-none">SPORTTIKUJA</div>
+          <div class="text-[8px] text-slate-400 tracking-widest uppercase">ESTB 1985</div>
+        </div>
+      </a>
 
-      <!-- Меню -->
-      <nav class="hidden xl:flex items-center gap-6 text-sm font-medium text-slate-300">
-        <a href="#etusivu" class="hover:text-primary transition text-white">Etusivu</a>
-        <a href="#kuntosali" class="hover:text-primary transition">Kuntosali</a>
-        <a href="#kuntoilu" class="hover:text-primary transition">Valmennus</a>
-        <a href="#kuntonyrkkeily" class="hover:text-primary transition">Kuntonyrkkeily</a>
-        <a href="#palvelut" class="hover:text-primary transition">Kuntoutus</a>
-        <a href="#hinnasto" class="hover:text-primary transition">Hinnasto</a>
-        <a href="#ajankohtaista" class="hover:text-primary transition">Ajankohtaista</a>
-        <a href="#yhteystiedot" class="hover:text-primary transition">Yhteystiedot</a>
-        <a href="#yhteystiedot" class="text-xs text-slate-400 hover:text-white transition">In English</a>
-      </nav>
+      <!-- Меню -->
+      <nav class="hidden xl:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#etusivu" class="hover:text-primary transition text-white">Etusivu</a>
+        <a href="#kuntosali" class="hover:text-primary transition">Kuntosali</a>
+        <a href="#kuntoilu" class="hover:text-primary transition">Valmennus</a>
+        <a href="#kuntonyrkkeily" class="hover:text-primary transition">Kuntonyrkkeily</a>
+        <a href="#palvelut" class="hover:text-primary transition">Kuntoutus</a>
+        <a href="#hinnasto" class="hover:text-primary transition">Hinnasto</a>
+        <a href="#ajankohtaista" class="hover:text-primary transition">Ajankohtaista</a>
+        <a href="#yhteystiedot" class="hover:text-primary transition">Yhteystiedot</a>
+        <a href="#yhteystiedot" class="text-xs text-slate-400 hover:text-white transition">In English</a>
+      </nav>
 
-      <!-- Правая часть -->
-      <div class="flex items-center gap-3">
-        <a href="#hinnasto" class="flex items-center gap-2 bg-dark-surface hover:bg-dark-border border border-dark-border text-white text-xs font-semibold px-3 py-2 rounded transition">
-          <i data-lucide="shopping-bag" class="w-4 h-4 text-primary"></i>
-          <span class="hidden sm:inline">Verkkokauppa</span>
-          <span class="bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
-        </a>
-        <a href="#hinnasto" class="bg-primary hover:bg-primary-hover text-white text-xs font-bold px-4 py-2.5 rounded transition uppercase tracking-wider hidden md:inline-block">
-          Hinnasto
-        </a>
-      </div>
-    </div>
-  </header>
+      <!-- Правая часть -->
+      <div class="flex items-center gap-3">
+        <a href="#hinnasto" class="flex items-center gap-2 bg-dark-surface hover:bg-dark-border border border-dark-border text-white text-xs font-semibold px-3 py-2 rounded transition">
+          <i data-lucide="shopping-bag" class="w-4 h-4 text-primary"></i>
+          <span class="hidden sm:inline">Verkkokauppa</span>
+          <span class="bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+        </a>
+        <a href="#hinnasto" class="bg-primary hover:bg-primary-hover text-white text-xs font-bold px-4 py-2.5 rounded transition uppercase tracking-wider hidden md:inline-block">
+          Hinnasto
+        </a>
+      </div>
+    </div>
+  </header>
 
-  <!-- ГЛАВНЫЙ БАННЕР С ТВОИМИ 2 ФОТО -->
-  <section id="etusivu" class="relative h-[720px] min-h-[600px] flex items-center justify-center overflow-hidden border-b border-dark-border">
-    
-    <!-- ТВОЕ 1-е ФОТО -->
-    <div id="slide1" class="hero-slide active" style="background-image: url('hero-1.jpg');"></div>
-    
-    <!-- ТВОЕ 2-е ФОТО -->
-    <div id="slide2" class="hero-slide" style="background-image: url('hero-2.jpg');"></div>
+  <!-- ГЛАВНЫЙ БАННЕР С ТВОИМИ 2 ФОТО -->
+  <section id="etusivu" class="relative h-[720px] min-h-[600px] flex items-center justify-center overflow-hidden border-b border-dark-border">
+    
+    <!-- ТВОЕ 1-е ФОТО -->
+    <div id="slide1" class="hero-slide active" style="background-image: url('hero-1.jpg');"></div>
+    
+    <!-- ТВОЕ 2-е ФОТО -->
+    <div id="slide2" class="hero-slide" style="background-image: url('hero-2.jpg');"></div>
 
-    <!-- Затемнение -->
-    <div class="hero-overlay z-10"></div>
+    <!-- Затемнение -->
+    <div class="hero-overlay z-10"></div>
 
-    <!-- Текстовый блок -->
-    <div class="relative z-20 max-w-4xl mx-auto px-4 text-center">
-      
-      <div class="inline-flex items-center gap-2 bg-dark-base/90 border border-primary/40 px-4 py-1.5 rounded-full mb-6 text-primary text-xs font-bold tracking-widest uppercase">
-        <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
-        <span id="sliderBadge">EI SITOUTUMISPAKKOA</span>
-      </div>
+    <!-- Текстовый блок -->
+    <div class="relative z-20 max-w-4xl mx-auto px-4 text-center">
+      
+      <div class="inline-flex items-center gap-2 bg-dark-base/90 border border-primary/40 px-4 py-1.5 rounded-full mb-6 text-primary text-xs font-bold tracking-widest uppercase">
+        <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+        <span id="sliderBadge">EI SITOUTUMISPAKKOA</span>
+      </div>
 
-      <h1 id="sliderTitle" class="font-display font-extrabold text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.1] mb-6">
-        Täyden palvelun kuntokeskus
-      </h1>
+      <h1 id="sliderTitle" class="font-display font-extrabold text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.1] mb-6">
+        Täyden palvelun kuntokeskus
+      </h1>
 
-      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
-        Kuntosali Herttoniemessä. Ei jäsenyys- tai liittymispakkoa, ei suoraveloitussopimuksia. Treenaa omilla ehdoillasi vuoden jokaisena päivänä.
-      </p>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+        Kuntosali Herttoniemessä. Ei jäsenyys- tai liittymispakkoa, ei suoraveloitussopimuksia. Treenaa omilla ehdoillasi vuoden jokaisena päivänä.
+      </p>
 
-      <div class="flex flex-wrap justify-center items-center gap-4">
-        <a href="#hinnasto" class="bg-primary hover:bg-primary-hover text-white text-sm font-bold px-7 py-3.5 rounded transition uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-primary/20">
-          Katso koko hinnasto <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
-        <a href="#yhteystiedot" class="bg-dark-surface/90 hover:bg-dark-border border border-dark-border text-white text-sm font-semibold px-7 py-3.5 rounded transition">
-          Asiakaspalvelun aukioloajat
-        </a>
-      </div>
+      <div class="flex flex-wrap justify-center items-center gap-4">
+        <a href="#hinnasto" class="bg-primary hover:bg-primary-hover text-white text-sm font-bold px-7 py-3.5 rounded transition uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-primary/20">
+          Katso koko hinnasto <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="#yhteystiedot" class="bg-dark-surface/90 hover:bg-dark-border border border-dark-border text-white text-sm font-semibold px-7 py-3.5 rounded transition">
+          Asiakaspalvelun aukioloajat
+        </a>
+      </div>
 
-      <!-- Кнопки слайдов -->
-      <div class="flex justify-center items-center gap-3 mt-12">
-        <button onclick="setSlide(0)" id="dot0" class="h-2 w-8 bg-primary rounded-full transition-all" aria-label="Slide 1"></button>
-        <button onclick="setSlide(1)" id="dot1" class="h-2 w-2 bg-slate-600 hover:bg-slate-400 rounded-full transition-all" aria-label="Slide 2"></button>
-        <button onclick="setSlide(2)" id="dot2" class="h-2 w-2 bg-slate-600 hover:bg-slate-400 rounded-full transition-all" aria-label="Slide 3"></button>
-      </div>
-    </div>
-  </section>
+      <!-- Кнопки слайдов -->
+      <div class="flex justify-center items-center gap-3 mt-12">
+        <button onclick="setSlide(0)" id="dot0" class="h-2 w-8 bg-primary rounded-full transition-all" aria-label="Slide 1"></button>
+        <button onclick="setSlide(1)" id="dot1" class="h-2 w-2 bg-slate-600 hover:bg-slate-400 rounded-full transition-all" aria-label="Slide 2"></button>
+        <button onclick="setSlide(2)" id="dot2" class="h-2 w-2 bg-slate-600 hover:bg-slate-400 rounded-full transition-all" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
 
-  <!-- СЕКЦИЯ 1: TERVETULOA TREENAAMAAN SPORTTIKUJALLE (ПОДСВЕТКА СЛОВ ПРИ СКРОЛЛЕ) -->
-  <section class="py-24 px-4 sm:px-6 max-w-5xl mx-auto relative tech-grid">
-    <div class="text-xs uppercase font-bold tracking-widest text-primary mb-3">// 01. Esittely</div>
-    <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight mb-8">
-      Tervetuloa treenaamaan Sporttikujalle
-    </h2>
+  <!-- СЕКЦИЯ 1: TERVETULOA TREENAAMAAN SPORTTIKUJALLE (ПОДСВЕТКА СЛОВ ПРИ СКРОЛЛЕ) -->
+  <section class="py-24 px-4 sm:px-6 max-w-5xl mx-auto relative tech-grid">
+    <div class="text-xs uppercase font-bold tracking-widest text-primary mb-3">// 01. Esittely</div>
+    <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight mb-8">
+      Tervetuloa treenaamaan Sporttikujalle
+    </h2>
 
-    <div id="scrollRevealText" class="text-xl sm:text-2xl lg:text-3xl font-medium leading-relaxed mb-10 text-slate-400">
-      Olemme koko perheen treenipaikka, ja tilamme sijaitsevat Herttoniemenrannassa liikuntapuistossa ja ne käsittävät hyvin ilmastoidun kuntosalin, nyrkkeilysalin, kahvilan, urheiluväline- ja lisäravinnekaupan, siistit pukuhuoneet, täysin uudistetut suihkutilat ja saunat.
-    </div>
+    <div id="scrollRevealText" class="text-xl sm:text-2xl lg:text-3xl font-medium leading-relaxed mb-10 text-slate-400">
+      Olemme koko perheen treenipaikka, ja tilamme sijaitsevat Herttoniemenrannassa liikuntapuistossa ja ne käsittävät hyvin ilmastoidun kuntosalin, nyrkkeilysalin, kahvilan, urheiluväline- ja lisäravinnekaupan, siistit pukuhuoneet, täysin uudistetut suihkutilat ja saunat.
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-dark-border">
-      <div class="bg-dark-card border border-dark-border p-5 rounded-lg flex items-start gap-4">
-        <div class="p-2.5 rounded bg-dark-surface text-primary border border-dark-border">
-          <i data-lucide="flame" class="w-5 h-5"></i>
-        </div>
-        <div>
-          <div class="text-white font-bold text-sm mb-1 font-display">Saunat päällä</div>
-          <div class="text-xs text-slate-400 leading-relaxed">
-            Ma klo 11–22, Ti klo 14–22, Ke klo 11–22, To–Su klo 14–22.
-          </div>
-        </div>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-dark-border">
+      <div class="bg-dark-card border border-dark-border p-5 rounded-lg flex items-start gap-4">
+        <div class="p-2.5 rounded bg-dark-surface text-primary border border-dark-border">
+          <i data-lucide="flame" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <div class="text-white font-bold text-sm mb-1 font-display">Saunat päällä</div>
+          <div class="text-xs text-slate-400 leading-relaxed">
+            Ma klo 11–22, Ti klo 14–22, Ke klo 11–22, To–Su klo 14–22.
+          </div>
+        </div>
+      </div>
 
-      <div class="bg-dark-card border border-dark-border p-5 rounded-lg flex items-start gap-4">
-        <div class="p-2.5 rounded bg-dark-surface text-primary border border-dark-border">
-          <i data-lucide="key" class="w-5 h-5"></i>
-        </div>
-        <div>
-          <div class="text-white font-bold text-sm mb-1 font-display">Kulkukortilla 365 päivää</div>
-          <div class="text-xs text-slate-400 leading-relaxed">
-            Treenaamaan pääset kulkukortilla vuoden jokaisena päivänä klo 5–24!
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="bg-dark-card border border-dark-border p-5 rounded-lg flex items-start gap-4">
+        <div class="p-2.5 rounded bg-dark-surface text-primary border border-dark-border">
+          <i data-lucide="key" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <div class="text-white font-bold text-sm mb-1 font-display">Kulkukortilla 365 päivää</div>
+          <div class="text-xs text-slate-400 leading-relaxed">
+            Treenaamaan pääset kulkukortilla vuoden jokaisena päivänä klo 5–24!
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- СЕКЦИЯ 2: KUNTOSALI + ДОСЛОВНЫЕ ОТЗЫВЫ NINA & ANNE -->
-  <section id="kuntosali" class="py-20 border-t border-dark-border bg-dark-card">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <div class="lg:col-span-6 space-y-6">
-          <div class="text-xs uppercase font-bold tracking-widest text-primary">// 02. Kuntosali</div>
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
-            Kuntosali Herttoniemessä
-          </h2>
-          <p class="text-slate-300 text-base leading-relaxed">
-            Sporttikujan kuntosali soveltuu niin kuntoilijan kuin tosiurheilijankin tarpeisiin. Meiltä löydät kattavan valikoiman laadukkaita laitteita, vapaita painoja sekä tilaa toiminnalliseen harjoitteluun.
-          </p>
+  <!-- СЕКЦИЯ 2: KUNTOSALI + ДОСЛОВНЫЕ ОТЗЫВЫ NINA & ANNE -->
+  <section id="kuntosali" class="py-20 border-t border-dark-border bg-dark-card">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="text-xs uppercase font-bold tracking-widest text-primary">// 02. Kuntosali</div>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+            Kuntosali Herttoniemessä
+          </h2>
+          <p class="text-slate-300 text-base leading-relaxed">
+            Sporttikujan kuntosali soveltuu niin kuntoilijan kuin tosiurheilijankin tarpeisiin. Meiltä löydät kattavan valikoiman laadukkaita laitteita, vapaita painoja sekä tilaa toiminnalliseen harjoitteluun.
+          </p>
 
-          <div class="space-y-4 pt-4">
-            <div class="border-l-2 border-primary pl-4 py-1 bg-dark-surface/60 rounded-r p-4">
-              <p class="text-sm text-slate-200 italic mb-2">
-                ”Sporttikujalla on rento ja ystävällinen meininki! Henkilökunta ja kanssatreenaajat mahtavia!”
-              </p>
-              <div class="text-xs font-bold text-primary tracking-wide">— Nina</div>
-            </div>
+          <div class="space-y-4 pt-4">
+            <div class="border-l-2 border-primary pl-4 py-1 bg-dark-surface/60 rounded-r p-4">
+              <p class="text-sm text-slate-200 italic mb-2">
+                ”Sporttikujalla on rento ja ystävällinen meininki! Henkilökunta ja kanssatreenaajat mahtavia!”
+              </p>
+              <div class="text-xs font-bold text-primary tracking-wide">— Nina</div>
+            </div>
 
-            <div class="border-l-2 border-primary pl-4 py-1 bg-dark-surface/60 rounded-r p-4">
-              <p class="text-sm text-slate-200 italic mb-2">
-                ”Hyvä henkilökunta, symppis paikka ja kotoinen ilmapiiri. Aina tuntee olevansa tervetullut salille!”
-              </p>
-              <div class="text-xs font-bold text-primary tracking-wide">— Anne</div>
-            </div>
-          </div>
-        </div>
+            <div class="border-l-2 border-primary pl-4 py-1 bg-dark-surface/60 rounded-r p-4">
+              <p class="text-sm text-slate-200 italic mb-2">
+                ”Hyvä henkilökunta, symppis paikka ja kotoinen ilmapiiri. Aina tuntee olevansa tervetullut salille!”
+              </p>
+              <div class="text-xs font-bold text-primary tracking-wide">— Anne</div>
+            </div>
+          </div>
+        </div>
 
-        <div class="lg:col-span-6">
-          <div class="relative rounded-lg overflow-hidden border border-dark-border group">
-            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop" alt="Sporttikuja kuntosali" class="w-full h-[420px] object-cover transition duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-base via-transparent to-transparent"></div>
-            <div class="absolute bottom-4 left-4 right-4 bg-dark-base/85 backdrop-blur border border-dark-border p-3 rounded text-xs text-slate-300">
-              <span class="text-primary font-bold">EI JÄSENYYS- TAI LIITTYMISPAKKOA.</span> Kertamaksulla pääset treenille asiakaspalvelun aukioloaikoina.
-            </div>
-          </div>
-        </div>
+        <div class="lg:col-span-6">
+          <div class="relative rounded-lg overflow-hidden border border-dark-border group">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop" alt="Sporttikuja kuntosali" class="w-full h-[420px] object-cover transition duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-base via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 bg-dark-base/85 backdrop-blur border border-dark-border p-3 rounded text-xs text-slate-300">
+              <span class="text-primary font-bold">EI JÄSENYYS- TAI LIITTYMISPAKKOA.</span> Kertamaksulla pääset treenille asiakaspalvelun aukioloaikoina.
+            </div>
+          </div>
+        </div>
 
-      </div>
-    </div>
-  </section>
+      </div>
+    </div>
+  </section>
 
-  <!-- СЕКЦИЯ 3: KUNTONYRKKEILY & RYHMÄLIIKUNTA -->
-  <section id="kuntonyrkkeily" class="py-20 border-t border-dark-border bg-dark-base">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <div class="lg:col-span-6 order-2 lg:order-1">
-          <div class="relative rounded-lg overflow-hidden border border-dark-border group">
-            <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1200&auto=format&fit=crop" alt="Kuntonyrkkeily" class="w-full h-[400px] object-cover transition duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-base via-transparent to-transparent"></div>
-            <div class="absolute bottom-4 left-4 bg-dark-surface/90 border border-dark-border px-3 py-1.5 rounded text-xs font-bold text-white">
-              Nyrkkeilysali Herttoniemenrannassa
-            </div>
-          </div>
-        </div>
+  <!-- СЕКЦИЯ 3: KUNTONYRKKEILY & RYHMÄLIIKUNTA -->
+  <section id="kuntonyrkkeily" class="py-20 border-t border-dark-border bg-dark-base">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 order-2 lg:order-1">
+          <div class="relative rounded-lg overflow-hidden border border-dark-border group">
+            <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1200&auto=format&fit=crop" alt="Kuntonyrkkeily" class="w-full h-[400px] object-cover transition duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-base via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 bg-dark-surface/90 border border-dark-border px-3 py-1.5 rounded text-xs font-bold text-white">
+              Nyrkkeilysali Herttoniemenrannassa
+            </div>
+          </div>
+        </div>
 
-        <div class="lg:col-span-6 order-1 lg:order-2 space-y-6">
-          <div class="text-xs uppercase font-bold tracking-widest text-primary">// 03. Kamppailu & Tunnit</div>
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
-            Kuntonyrkkeily
-          </h2>
-          <p class="text-slate-300 text-base leading-relaxed">
-            Haasta itsesi ja ilmoittaudu kurssille! Kuntonyrkkeilyä aloittelijoille ja kokeneille harrastajille, kilpanyrkkeilyä ja junnuboxingia 12–16v. nuorille.
-          </p>
+        <div class="lg:col-span-6 order-1 lg:order-2 space-y-6">
+          <div class="text-xs uppercase font-bold tracking-widest text-primary">// 03. Kamppailu & Tunnit</div>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+            Kuntonyrkkeily
+          </h2>
+          <p class="text-slate-300 text-base leading-relaxed">
+            Haasta itsesi ja ilmoittaudu kurssille! Kuntonyrkkeilyä aloittelijoille ja kokeneille harrastajille, kilpanyrkkeilyä ja junnuboxingia 12–16v. nuorille.
+          </p>
 
-          <div class="bg-dark-card border border-dark-border p-5 rounded-lg">
-            <h3 class="font-display font-bold text-white text-base mb-1">Sporttikujalla myös ryhmäliikuntaa!</h3>
-            <p class="text-sm text-slate-400">
-              Sporttikujalla pyörii erilaisia ryhmäliikuntatunteja seniori-ikäisille. Tervetuloa mukaan!
-            </p>
-          </div>
+          <div class="bg-dark-card border border-dark-border p-5 rounded-lg">
+            <h3 class="font-display font-bold text-white text-base mb-1">Sporttikujalla myös ryhmäliikuntaa!</h3>
+            <p class="text-sm text-slate-400">
+              Sporttikujalla pyörii erilaisia ryhmäliikuntatunteja seniori-ikäisille. Tervetuloa mukaan!
+            </p>
+          </div>
 
-          <div>
-            <a href="#ajankohtaista" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white text-xs font-bold px-6 py-3 rounded uppercase tracking-wider transition">
-              Katso kuntonyrkkeilykurssit täältä <i data-lucide="chevron-right" class="w-4 h-4"></i>
-            </a>
-          </div>
-        </div>
+          <div>
+            <a href="#ajankohtaista" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white text-xs font-bold px-6 py-3 rounded uppercase tracking-wider transition">
+              Katso kuntonyrkkeilykurssit täältä <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
 
-      </div>
-    </div>
-  </section>
+      </div>
+    </div>
+  </section>
 
-  <!-- СЕКЦИЯ 4: PALVELUT -->
-  <section id="palvelut" class="py-20 border-t border-dark-border bg-dark-card">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="flex flex-wrap items-end justify-between gap-4 mb-12">
-        <div>
-          <div class="text-xs uppercase font-bold tracking-widest text-primary mb-2">// 04. Palvelut</div>
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">Kaikki palvelumme</h2>
-        </div>
-        <p class="text-xs text-slate-400">Täyden palvelun kuntokeskus saman katon alla</p>
-      </div>
+  <!-- СЕКЦИЯ 4: PALVELUT -->
+  <section id="palvelut" class="py-20 border-t border-dark-border bg-dark-card">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-12">
+        <div>
+          <div class="text-xs uppercase font-bold tracking-widest text-primary mb-2">// 04. Palvelut</div>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">Kaikki palvelumme</h2>
+        </div>
+        <p class="text-xs text-slate-400">Täyden palvelun kuntokeskus saman katon alla</p>
+      </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
-          <div class="h-44 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop" alt="Kuntosali" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-surface via-transparent to-transparent"></div>
-          </div>
-          <div class="p-5">
-            <h3 class="font-display font-bold text-white text-lg mb-1">Kuntosali</h3>
-            <p class="text-xs text-slate-400 mb-4">Ilmastoitu, kattava laitekanta ja vapaapainot.</p>
-            <span class="text-xs font-bold text-primary flex items-center gap-1">More Info <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
-          </div>
-        </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop" alt="Kuntosali" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-surface via-transparent to-transparent"></div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-display font-bold text-white text-lg mb-1">Kuntosali</h3>
+            <p class="text-xs text-slate-400 mb-4">Ilmastoitu, kattava laitekanta ja vapaapainot.</p>
+            <span class="text-xs font-bold text-primary flex items-center gap-1">More Info <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+          </div>
+        </div>
 
-        <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
-          <div class="h-44 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=600&auto=format&fit=crop" alt="Nyrkkeilysali" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-surface via-transparent to-transparent"></div>
-          </div>
-          <div class="p-5">
-            <h3 class="font-display font-bold text-white text-lg mb-1">Nyrkkeilysali</h3>
-            <p class="text-xs text-slate-400 mb-4">Kuntonyrkkeily, kilpanyrkkeily ja junnuboxing.</p>
-            <span class="text-xs font-bold text-primary flex items-center gap-1">More Info <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
-          </div>
-        </div>
+        <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=600&auto=format&fit=crop" alt="Nyrkkeilysali" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-surface via-transparent to-transparent"></div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-display font-bold text-white text-lg mb-1">Nyrkkeilysali</h3>
+            <p class="text-xs text-slate-400 mb-4">Kuntonyrkkeily, kilpanyrkkeily ja junnuboxing.</p>
+            <span class="text-xs font-bold text-primary flex items-center gap-1">More Info <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+          </div>
+        </div>
 
-        <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
-          <div class="h-44 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop" alt="Siistit pukuhuoneet" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-surface via-transparent to-transparent"></div>
-          </div>
-          <div class="p-5">
-            <h3 class="font-display font-bold text-white text-lg mb-1">Siistit pukuhuoneet</h3>
-            <p class="text-xs text-slate-400 mb-4">Uudistetut tilavat pukukaapit ja lukolliset säilytystilat.</p>
-            <span class="text-xs text-slate-400">Palvelut käytössäsi</span>
-          </div>
-        </div>
+        <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop" alt="Siistit pukuhuoneet" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-surface via-transparent to-transparent"></div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-display font-bold text-white text-lg mb-1">Siistit pukuhuoneet</h3>
+            <p class="text-xs text-slate-400 mb-4">Uudistetut tilavat pukukaapit ja lukolliset säilytystilat.</p>
+            <span class="text-xs text-slate-400">Palvelut käytössäsi</span>
+          </div>
+        </div>
 
-        <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
-          <div class="h-44 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=600&auto=format&fit=crop" alt="Saunatilat" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-surface via-transparent to-transparent"></div>
-          </div>
-          <div class="p-5">
-            <h3 class="font-display font-bold text-white text-lg mb-1">Suihkutilat ja saunat</h3>
-            <p class="text-xs text-slate-400 mb-4">Täysin remontoidut ja lämpimät saunat joka viikko.</p>
-            <span class="text-xs text-slate-400">Ma-Ke 11-22, Ti, To-Su 14-22</span>
-          </div>
-        </div>
+        <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=600&auto=format&fit=crop" alt="Saunatilat" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-surface via-transparent to-transparent"></div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-display font-bold text-white text-lg mb-1">Suihkutilat ja saunat</h3>
+            <p class="text-xs text-slate-400 mb-4">Täysin remontoidut ja lämpimät saunat joka viikko.</p>
+            <span class="text-xs text-slate-400">Ma-Ke 11-22, Ti, To-Su 14-22</span>
+          </div>
+        </div>
 
-        <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
-          <div class="h-44 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600&auto=format&fit=crop" alt="Kahvila ja urheilukauppa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-surface via-transparent to-transparent"></div>
-          </div>
-          <div class="p-5">
-            <h3 class="font-display font-bold text-white text-lg mb-1">Kahvila ja urheilukauppa</h3>
-            <p class="text-xs text-slate-400 mb-4">Urheiluvälineet, lisäravinteet ja virkistävät juomat paikan päällä.</p>
-            <span class="text-xs text-slate-400">Vastaanoton yhteydessä</span>
-          </div>
-        </div>
+        <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600&auto=format&fit=crop" alt="Kahvila ja urheilukauppa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-surface via-transparent to-transparent"></div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-display font-bold text-white text-lg mb-1">Kahvila ja urheilukauppa</h3>
+            <p class="text-xs text-slate-400 mb-4">Urheiluvälineet, lisäravinteet ja virkistävät juomat paikan päällä.</p>
+            <span class="text-xs text-slate-400">Vastaanoton yhteydessä</span>
+          </div>
+        </div>
 
-        <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
-          <div class="h-44 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=600&auto=format&fit=crop" alt="Personal training" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-surface via-transparent to-transparent"></div>
-          </div>
-          <div class="p-5">
-            <h3 class="font-display font-bold text-white text-lg mb-1">Personal training -palvelut</h3>
-            <p class="text-xs text-slate-400 mb-4">Ammattitaitoiset valmentajat tavoitteidesi tueksi.</p>
-            <span class="text-xs font-bold text-primary flex items-center gap-1">More Info <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
-          </div>
-        </div>
+        <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=600&auto=format&fit=crop" alt="Personal training" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-surface via-transparent to-transparent"></div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-display font-bold text-white text-lg mb-1">Personal training -palvelut</h3>
+            <p class="text-xs text-slate-400 mb-4">Ammattitaitoiset valmentajat tavoitteidesi tueksi.</p>
+            <span class="text-xs font-bold text-primary flex items-center gap-1">More Info <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+          </div>
+        </div>
 
-      </div>
-    </div>
-  </section>
+      </div>
+    </div>
+  </section>
 
-  <!-- СЕКЦИЯ 5: AJANKOHTAISTA (ВСЕ 10 НОВОСТЕЙ) -->
-  <section id="ajankohtaista" class="py-20 border-t border-dark-border bg-dark-base">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="mb-10">
-        <div class="text-xs uppercase font-bold tracking-widest text-primary mb-2">// 05. Ajankohtaista</div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">Tiedotteet ja uutiset</h2>
-      </div>
+  <!-- СЕКЦИЯ 5: AJANKOHTAISTA (ВСЕ 10 НОВОСТЕЙ) -->
+  <section id="ajankohtaista" class="py-20 border-t border-dark-border bg-dark-base">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="mb-10">
+        <div class="text-xs uppercase font-bold tracking-widest text-primary mb-2">// 05. Ajankohtaista</div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">Tiedotteet ja uutiset</h2>
+      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        
-        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
-          <div class="text-xs text-primary font-bold mb-2">Aukioloajat</div>
-          <h3 class="text-white font-bold text-base mb-2 font-display">Kesä 2026 aukioloajat</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">Asiakaspalvelun poikkeusajat ja kesäkauden tiedot vastaanotosta.</p>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
+          <div class="text-xs text-primary font-bold mb-2">Aukioloajat</div>
+          <h3 class="text-white font-bold text-base mb-2 font-display">Kesä 2026 aukioloajat</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Asiakaspalvelun poikkeusajat ja kesäkauden tiedot vastaanotosta.</p>
+        </div>
 
-        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
-          <div class="text-xs text-primary font-bold mb-2">Aukioloajat</div>
-          <h3 class="text-white font-bold text-base mb-2 font-display">Kesä 2025 aukioloajat</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">Kulkukortilla kulku vuoden jokaisena päivänä klo 5–24.</p>
-        </div>
+        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
+          <div class="text-xs text-primary font-bold mb-2">Aukioloajat</div>
+          <h3 class="text-white font-bold text-base mb-2 font-display">Kesä 2025 aukioloajat</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Kulkukortilla kulku vuoden jokaisena päivänä klo 5–24.</p>
+        </div>
 
-        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
-          <div class="text-xs text-primary font-bold mb-2">Remontti</div>
-          <h3 class="text-white font-bold text-base mb-2 font-display">Porraskäytävänremontti</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">Kulku salille toimii normaalisti remontin aikana.</p>
-        </div>
+        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
+          <div class="text-xs text-primary font-bold mb-2">Remontti</div>
+          <h3 class="text-white font-bold text-base mb-2 font-display">Porraskäytävänremontti</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Kulku salille toimii normaalisti remontin aikana.</p>
+        </div>
 
-        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
-          <div class="text-xs text-primary font-bold mb-2">Tilat</div>
-          <h3 class="text-white font-bold text-base mb-2 font-display">Miesten pukukaapit</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">Uudet ja toimivammat kaapit asennettu miesten pukuhuoneeseen.</p>
-        </div>
+        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
+          <div class="text-xs text-primary font-bold mb-2">Tilat</div>
+          <h3 class="text-white font-bold text-base mb-2 font-display">Miesten pukukaapit</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Uudet ja toimivammat kaapit asennettu miesten pukuhuoneeseen.</p>
+        </div>
 
-        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
-          <div class="text-xs text-primary font-bold mb-2">Uudistus</div>
-          <h3 class="text-white font-bold text-base mb-2 font-display">Uudet suihku- ja saunatilat vihdoinkin valmis!</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">Täysin uudistetut tilat ovat asiakkaiden vapaassa käytössä.</p>
-        </div>
+        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
+          <div class="text-xs text-primary font-bold mb-2">Uudistus</div>
+          <h3 class="text-white font-bold text-base mb-2 font-display">Uudet suihku- ja saunatilat vihdoinkin valmis!</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Täysin uudistetut tilat ovat asiakkaiden vapaassa käytössä.</p>
+        </div>
 
-        <div class="bg-dark-card border border-primary/40 p-5 rounded bg-primary/5">
-          <div class="text-xs text-primary font-bold mb-2">Tärkeä tiedote</div>
-          <h3 class="text-white font-bold text-base mb-2 font-display">Uudet tuulet puhaltaa – Nivelputiikki</h3>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Solariumit on poistettu käytöstä 30.9.2024. Yksi puoli on käytössä vaan. Tilalle tulee erittäin toimivaksi todettu Nivelputiikki, Saharisen Teemu.
-          </p>
-        </div>
+        <div class="bg-dark-card border border-primary/40 p-5 rounded bg-primary/5">
+          <div class="text-xs text-primary font-bold mb-2">Tärkeä tiedote</div>
+          <h3 class="text-white font-bold text-base mb-2 font-display">Uudet tuulet puhaltaa – Nivelputiikki</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Solariumit on poistettu käytöstä 30.9.2024. Yksi puoli on käytössä vaan. Tilalle tulee erittäin toimivaksi todettu Nivelputiikki, Saharisen Teemu.
+          </p>
+        </div>
 
-        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
-          <div class="text-xs text-primary font-bold mb-2">Uusi laite</div>
-          <h3 class="text-white font-bold text-base mb-2 font-display">Kauan toivottu porraskone saapunut</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">Uusi porraskone saapunut ja asennettu kardioalueelle käyttövalmiina.</p>
-        </div>
+        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
+          <div class="text-xs text-primary font-bold mb-2">Uusi laite</div>
+          <h3 class="text-white font-bold text-base mb-2 font-display">Kauan toivottu porraskone saapunut</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Uusi porraskone saapunut ja asennettu kardioalueelle käyttövalmiina.</p>
+        </div>
 
-        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
-          <div class="text-xs text-primary font-bold mb-2">Nyrkkeily</div>
-          <h3 class="text-white font-bold text-base mb-2 font-display">Nyrkkeilysalin varatut vuorot</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">Tarkista varatut salivuorot ja ryhmätreenit ennen omatoimitreeniä.</p>
-        </div>
+        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
+          <div class="text-xs text-primary font-bold mb-2">Nyrkkeily</div>
+          <h3 class="text-white font-bold text-base mb-2 font-display">Nyrkkeilysalin varatut vuorot</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Tarkista varatut salivuorot ja ryhmätreenit ennen omatoimitreeniä.</p>
+        </div>
 
-        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
-          <div class="text-xs text-primary font-bold mb-2">Huolto</div>
-          <h3 class="text-white font-bold text-base mb-2 font-display">Juoksumattoihin vaihdettu uudet matot</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">LifeFitnessin juoksumattoihin on vaihdettu upouudet juoksumatot.</p>
-        </div>
+        <div class="bg-dark-card border border-dark-border p-5 rounded hover:border-slate-600 transition">
+          <div class="text-xs text-primary font-bold mb-2">Huolto</div>
+          <h3 class="text-white font-bold text-base mb-2 font-display">Juoksumattoihin vaihdettu uudet matot</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">LifeFitnessin juoksumattoihin on vaihdettu upouudet juoksumatot.</p>
+        </div>
 
-      </div>
-    </div>
-  </section>
+      </div>
+    </div>
+  </section>
 
-  <!-- СЕКЦИЯ 6 & 7: MAKSUTAVAT & HUOMIO TREENAAJAT -->
-  <section id="hinnasto" class="py-20 border-t border-dark-border bg-dark-card">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        
-        <div class="bg-dark-surface border border-dark-border p-8 rounded-lg">
-          <div class="text-xs uppercase font-bold tracking-widest text-primary mb-2">// Maksutavat</div>
-          <h3 class="font-display font-extrabold text-2xl text-white mb-4">Maksutavat paikan päällä</h3>
-          <p class="text-sm text-slate-300 leading-relaxed mb-4">
-            Voit maksaa meillä paikan päällä käteisellä, pankki- tai luottokortilla.
-          </p>
-          <p class="text-sm text-slate-300 leading-relaxed mb-6">
-            Voit maksaa myös Smartum liikunta- ja kulttuuriseteleillä, tai Smartum-mobiililla, Tyky-Kuntoseteleillä ja E-Passilla, sekä Edenred saldokortilla, virike-seteleillä ja -sovelluksella.
-          </p>
-          <div class="p-4 bg-primary/10 border-l-2 border-primary text-xs text-slate-300 space-y-2">
-            <div><strong class="text-white">HUOM!</strong> Liikuntaetu-mobiilisovelluksilla voi maksaa ainoastaan paikan päällä. Ethän tee maksua etukäteen kotona.</div>
-            <div class="text-primary font-semibold">Finnbodyn setelit eivät kelpaa meillä maksuvälineeksi.</div>
-          </div>
-        </div>
+  <!-- СЕКЦИЯ 6 & 7: MAKSUTAVAT & HUOMIO TREENAAJAT -->
+  <section id="hinnasto" class="py-20 border-t border-dark-border bg-dark-card">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        
+        <div class="bg-dark-surface border border-dark-border p-8 rounded-lg">
+          <div class="text-xs uppercase font-bold tracking-widest text-primary mb-2">// Maksutavat</div>
+          <h3 class="font-display font-extrabold text-2xl text-white mb-4">Maksutavat paikan päällä</h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Voit maksaa meillä paikan päällä käteisellä, pankki- tai luottokortilla.
+          </p>
+          <p class="text-sm text-slate-300 leading-relaxed mb-6">
+            Voit maksaa myös Smartum liikunta- ja kulttuuriseteleillä, tai Smartum-mobiililla, Tyky-Kuntoseteleillä ja E-Passilla, sekä Edenred saldokortilla, virike-seteleillä ja -sovelluksella.
+          </p>
+          <div class="p-4 bg-primary/10 border-l-2 border-primary text-xs text-slate-300 space-y-2">
+            <div><strong class="text-white">HUOM!</strong> Liikuntaetu-mobiilisovelluksilla voi maksaa ainoastaan paikan päällä. Ethän tee maksua etukäteen kotona.</div>
+            <div class="text-primary font-semibold">Finnbodyn setelit eivät kelpaa meillä maksuvälineeksi.</div>
+          </div>
+        </div>
 
-        <div class="bg-dark-surface border border-dark-border p-8 rounded-lg">
-          <div class="text-xs uppercase font-bold tracking-widest text-primary mb-2">// Ruuhka-ajat</div>
-          <h3 class="font-display font-extrabold text-2xl text-white mb-4">Huomio treenaajat!</h3>
-          <p class="text-sm text-slate-300 leading-relaxed mb-4">
-            Tiistaisin ja torstaisin klo 15.00–18.00 välillä on pahimmat ruuhkat kuntosalilla, ja erityisesti tiistaina klo 17–18 salin puolella saattaa olla ruuhkaa. Myös lauantaisin klo 9–12 välisenä aikana voi olla ruuhkaa, sillä voimanostoseura harjoittelee salillamme silloin.
-          </p>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Miesten pukuhuone on ma, ti ja to klo 18.00–20.00 välillä ruuhkainen kilpa- ja kuntonyrkkeilytreenien vuoksi. Voit tuoda kassisi säilytykseen asiakaspalvelun aukioloaikoina myös vastaanottoon ja laitamme ne lukkojen taakse säilytykseen.
-          </p>
-        </div>
+        <div class="bg-dark-surface border border-dark-border p-8 rounded-lg">
+          <div class="text-xs uppercase font-bold tracking-widest text-primary mb-2">// Ruuhka-ajat</div>
+          <h3 class="font-display font-extrabold text-2xl text-white mb-4">Huomio treenaajat!</h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Tiistaisin ja torstaisin klo 15.00–18.00 välillä on pahimmat ruuhkat kuntosalilla, ja erityisesti tiistaina klo 17–18 salin puolella saattaa olla ruuhkaa. Myös lauantaisin klo 9–12 välisenä aikana voi olla ruuhkaa, sillä voimanostoseura harjoittelee salillamme silloin.
+          </p>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Miesten pukuhuone on ma, ti ja to klo 18.00–20.00 välillä ruuhkainen kilpa- ja kuntonyrkkeilytreenien vuoksi. Voit tuoda kassisi säilytykseen asiakaspalvelun aukioloaikoina myös vastaanottoon ja laitamme ne lukkojen taakse säilytykseen.
+          </p>
+        </div>
 
-      </div>
-    </div>
-  </section>
+      </div>
+    </div>
+  </section>
 
-  <!-- СЕКЦИЯ 8: YHTEYSTIEDOT & KULKUYHTEYDET -->
-  <section id="yhteystiedot" class="py-20 border-t border-dark-border bg-dark-base">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="text-xs uppercase font-bold tracking-widest text-primary mb-2">// Yhteystiedot</div>
-      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-12">Ota yhteyttä ja saavu paikalle</h2>
+  <!-- СЕКЦИЯ 8: YHTEYSTIEDOT & KULKUYHTEYDET -->
+  <section id="yhteystiedot" class="py-20 border-t border-dark-border bg-dark-base">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-xs uppercase font-bold tracking-widest text-primary mb-2">// Yhteystiedot</div>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-12">Ota yhteyttä ja saavu paikalle</h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
-          <h3 class="font-display font-bold text-white text-lg mb-4">Sporttikuja</h3>
-          <p class="text-sm text-slate-300 mb-2">Paasivaarankatu 3<br>00810, Helsinki</p>
-          <p class="text-sm text-slate-400 mb-6">3. kerros (Sisäänkäynti 1. kerroksessa tenniskenttiä/jääkiekkokaukaloa vastapäätä)</p>
-          
-          <div class="space-y-2 text-sm border-t border-dark-border pt-4">
-            <div class="flex items-center gap-2">
-              <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
-              <a href="tel:0458855068" class="text-white hover:text-primary font-bold">045 8855 068</a>
-            </div>
-            <div class="flex items-center gap-2">
-              <i data-lucide="mail" class="w-4 h-4 text-primary"></i>
-              <a href="mailto:info@sporttikuja.fi" class="text-white hover:text-primary">info@sporttikuja.fi</a>
-            </div>
-          </div>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
+          <h3 class="font-display font-bold text-white text-lg mb-4">Sporttikuja</h3>
+          <p class="text-sm text-slate-300 mb-2">Paasivaarankatu 3<br>00810, Helsinki</p>
+          <p class="text-sm text-slate-400 mb-6">3. kerros (Sisäänkäynti 1. kerroksessa tenniskenttiä/jääkiekkokaukaloa vastapäätä)</p>
+          
+          <div class="space-y-2 text-sm border-t border-dark-border pt-4">
+            <div class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+              <a href="tel:0458855068" class="text-white hover:text-primary font-bold">045 8855 068</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-primary"></i>
+              <a href="mailto:info@sporttikuja.fi" class="text-white hover:text-primary">info@sporttikuja.fi</a>
+            </div>
+          </div>
+        </div>
 
-        <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
-          <h3 class="font-display font-bold text-white text-lg mb-4">Vastaanoton aukioloajat</h3>
-          <div class="space-y-2 text-sm text-slate-300">
-            <div class="flex justify-between border-b border-dark-border/50 pb-1.5">
-              <span>Maanantai</span> <span class="text-white font-medium">12.00 – 20.00</span>
-            </div>
-            <div class="flex justify-between border-b border-dark-border/50 pb-1.5">
-              <span>Tiistai</span> <span class="text-white font-medium">12.00 – 19.00</span>
-            </div>
-            <div class="flex justify-between border-b border-dark-border/50 pb-1.5">
-              <span>Keskiviikko</span> <span class="text-white font-medium">12.00 – 19.00</span>
-            </div>
-            <div class="flex justify-between border-b border-dark-border/50 pb-1.5">
-              <span>Torstai</span> <span class="text-white font-medium">12.00 – 19.00</span>
-            </div>
-            <div class="flex justify-between border-b border-dark-border/50 pb-1.5">
-              <span>Perjantai</span> <span class="text-white font-medium">12.00 – 17.00</span>
-            </div>
-            <div class="flex justify-between text-slate-400 pt-1">
-              <span>La – Su</span> <span>Ei asiakaspalvelua</span>
-            </div>
-          </div>
-          <div class="mt-4 pt-3 border-t border-dark-border text-xs text-primary font-bold">
-            Voimassa olevalla kulkukortilla treenaat joka päivä klo 5–24.
-          </div>
-        </div>
+        <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
+          <h3 class="font-display font-bold text-white text-lg mb-4">Vastaanoton aukioloajat</h3>
+          <div class="space-y-2 text-sm text-slate-300">
+            <div class="flex justify-between border-b border-dark-border/50 pb-1.5">
+              <span>Maanantai</span> <span class="text-white font-medium">12.00 – 20.00</span>
+            </div>
+            <div class="flex justify-between border-b border-dark-border/50 pb-1.5">
+              <span>Tiistai</span> <span class="text-white font-medium">12.00 – 19.00</span>
+            </div>
+            <div class="flex justify-between border-b border-dark-border/50 pb-1.5">
+              <span>Keskiviikko</span> <span class="text-white font-medium">12.00 – 19.00</span>
+            </div>
+            <div class="flex justify-between border-b border-dark-border/50 pb-1.5">
+              <span>Torstai</span> <span class="text-white font-medium">12.00 – 19.00</span>
+            </div>
+            <div class="flex justify-between border-b border-dark-border/50 pb-1.5">
+              <span>Perjantai</span> <span class="text-white font-medium">12.00 – 17.00</span>
+            </div>
+            <div class="flex justify-between text-slate-400 pt-1">
+              <span>La – Su</span> <span>Ei asiakaspalvelua</span>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-dark-border text-xs text-primary font-bold">
+            Voimassa olevalla kulkukortilla treenaat joka päivä klo 5–24.
+          </div>
+        </div>
 
-        <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
-          <h3 class="font-display font-bold text-white text-lg mb-4">Julkisilla Sporttikujalle</h3>
-          <div class="space-y-3 text-xs text-slate-300">
-            <div>
-              <strong class="text-white block mb-0.5">Metro:</strong>
-              Herttoniemen metroasemalta on n. 1 km matkaa.
-            </div>
-            <div>
-              <strong class="text-white block mb-0.5">Bussit metroasemalle (1 km):</strong>
-              79, 80, 82, 83, 85, 86, 88, 89
-            </div>
-            <div>
-              <strong class="text-white block mb-0.5">Herttoniemenrantaan (0,1 km):</strong>
-              81, 81 B
-            </div>
-            <div>
-              <strong class="text-white block mb-0.5">Kipparlahteen (0,5 km):</strong>
-              500, 510
-            </div>
-            <div class="pt-2 border-t border-dark-border text-slate-400">
-              Parkkipaikkoja Paasivaarankadulla sekä talon parkkihallissa paikan ostaneille.
-            </div>
-          </div>
-        </div>
+        <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
+          <h3 class="font-display font-bold text-white text-lg mb-4">Julkisilla Sporttikujalle</h3>
+          <div class="space-y-3 text-xs text-slate-300">
+            <div>
+              <strong class="text-white block mb-0.5">Metro:</strong>
+              Herttoniemen metroasemalta on n. 1 km matkaa.
+            </div>
+            <div>
+              <strong class="text-white block mb-0.5">Bussit metroasemalle (1 km):</strong>
+              79, 80, 82, 83, 85, 86, 88, 89
+            </div>
+            <div>
+              <strong class="text-white block mb-0.5">Herttoniemenrantaan (0,1 km):</strong>
+              81, 81 B
+            </div>
+            <div>
+              <strong class="text-white block mb-0.5">Kipparlahteen (0,5 km):</strong>
+              500, 510
+            </div>
+            <div class="pt-2 border-t border-dark-border text-slate-400">
+              Parkkipaikkoja Paasivaarankadulla sekä talon parkkihallissa paikan ostaneille.
+            </div>
+          </div>
+        </div>
 
-      </div>
-    </div>
-  </section>
+      </div>
+    </div>
+  </section>
 
-  <!-- ПОДВАЛ -->
-  <footer class="border-t border-dark-border bg-dark-base py-10 px-4 text-xs text-slate-400">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-      <div>
-        <p>© Sporttikuja – Kuntosali Herttoniemessä. Kaikki oikeudet pidätetään.</p>
-        <p class="mt-1 text-[11px] text-slate-400">Kotisivut yritykselle toteutti Geeky Panda · Theme by SiteOrigin</p>
-      </div>
-      <div class="flex flex-wrap justify-center gap-6">
-        <a href="#" class="hover:text-primary transition">Tietosuojaseloste</a>
-        <a href="#" class="hover:text-primary transition">Verkkokaupan toimitusehdot</a>
-        <a href="#" class="hover:text-primary transition">Oiva-raportit</a>
-      </div>
-    </div>
-  </footer>
+  <!-- ПОДВАЛ -->
+  <footer class="border-t border-dark-border bg-dark-base py-10 px-4 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+      <div>
+        <p>© Sporttikuja – Kuntosali Herttoniemessä. Kaikki oikeudet pidätetään.</p>
+        <p class="mt-1 text-[11px] text-slate-400">Kotisivut yritykselle toteutti Geeky Panda · Theme by SiteOrigin</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="#" class="hover:text-primary transition">Tietosuojaseloste</a>
+        <a href="#" class="hover:text-primary transition">Verkkokaupan toimitusehdot</a>
+        <a href="#" class="hover:text-primary transition">Oiva-raportit</a>
+      </div>
+    </div>
+  </footer>
 
-  <!-- СКРИПТ: СМЕНА ФОТО И ПОДСВЕТКА СЛОВ -->
-  <script>
-    lucide.createIcons();
+  <!-- СКРИПТ: СМЕНА ФОТО И ПОДСВЕТКА СЛОВ -->
+  <script>
+    lucide.createIcons();
 
-    const slidesData = [
-      { badge: "EI SITOUTUMISPAKKOA", title: "Täyden palvelun kuntokeskus" },
-      { badge: "EI JÄSENYYS- TAI LIITTYMISPAKKOA", title: "Kuntosali Herttoniemessä" },
-      { badge: "EI SUORAVELOITUSSOPIMUKSIA", title: "Nyrkkeilysali & Kuntoilu" }
-    ];
+    const slidesData = [
+      { badge: "EI SITOUTUMISPAKKOA", title: "Täyden palvelun kuntokeskus" },
+      { badge: "EI JÄSENYYS- TAI LIITTYMISPAKKOA", title: "Kuntosali Herttoniemessä" },
+      { badge: "EI SUORAVELOITUSSOPIMUKSIA", title: "Nyrkkeilysali & Kuntoilu" }
+    ];
 
-    let currentSlide = 0;
-    const slide1 = document.getElementById('slide1');
-    const slide2 = document.getElementById('slide2');
-    const badgeEl = document.getElementById('sliderBadge');
-    const titleEl = document.getElementById('sliderTitle');
+    let currentSlide = 0;
+    const slide1 = document.getElementById('slide1');
+    const slide2 = document.getElementById('slide2');
+    const badgeEl = document.getElementById('sliderBadge');
+    const titleEl = document.getElementById('sliderTitle');
 
-    function setSlide(index) {
-      currentSlide = index;
-      
-      if (index % 2 === 0) {
-        slide1.classList.add('active');
-        slide2.classList.remove('active');
-      } else {
-        slide2.classList.add('active');
-        slide1.classList.remove('active');
-      }
+    function setSlide(index) {
+      currentSlide = index;
+      
+      if (index % 2 === 0) {
+        slide1.classList.add('active');
+        slide2.classList.remove('active');
+      } else {
+        slide2.classList.add('active');
+        slide1.classList.remove('active');
+      }
 
-      badgeEl.textContent = slidesData[index].badge;
-      titleEl.textContent = slidesData[index].title;
+      badgeEl.textContent = slidesData[index].badge;
+      titleEl.textContent = slidesData[index].title;
 
-      for (let i = 0; i < 3; i++) {
-        const dot = document.getElementById(`dot${i}`);
-        if (i === index) {
-          dot.className = "h-2 w-8 bg-primary rounded-full transition-all";
-        } else {
-          dot.className = "h-2 w-2 bg-slate-600 hover:bg-slate-400 rounded-full transition-all";
-        }
-      }
-    }
+      for (let i = 0; i < 3; i++) {
+        const dot = document.getElementById(`dot${i}`);
+        if (i === index) {
+          dot.className = "h-2 w-8 bg-primary rounded-full transition-all";
+        } else {
+          dot.className = "h-2 w-2 bg-slate-600 hover:bg-slate-400 rounded-full transition-all";
+        }
+      }
+    }
 
-    setInterval(() => {
-      let next = (currentSlide + 1) % slidesData.length;
-      setSlide(next);
-    }, 5000);
+    setInterval(() => {
+      let next = (currentSlide + 1) % slidesData.length;
+      setSlide(next);
+    }, 5000);
 
-    // Скролл-подсветка
-    const textContainer = document.getElementById('scrollRevealText');
-    if (textContainer) {
-      const rawWords = textContainer.innerText.trim().split(/\s+/);
-      textContainer.innerHTML = '';
-      
-      const wordElements = rawWords.map((word) => {
-        const span = document.createElement('span');
-        span.className = 'reveal-word';
-        span.textContent = word;
-        textContainer.appendChild(span);
-        return span;
-      });
+    // Скролл-подсветка
+    const textContainer = document.getElementById('scrollRevealText');
+    if (textContainer) {
+      const rawWords = textContainer.innerText.trim().split(/\s+/);
+      textContainer.innerHTML = '';
+      
+      const wordElements = rawWords.map((word) => {
+        const span = document.createElement('span');
+        span.className = 'reveal-word';
+        span.textContent = word;
+        textContainer.appendChild(span);
+        return span;
+      });
 
-      function onScrollReveal() {
-        const rect = textContainer.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        const start = windowHeight * 0.85;
-        const end = windowHeight * 0.25;
-        const progress = Math.min(Math.max((start - rect.top) / (start - end), 0), 1);
-        const countToHighlight = Math.floor(progress * wordElements.length);
-        
-        wordElements.forEach((el, index) => {
-          if (index < countToHighlight) {
-            if (el.textContent.includes('Sporttikujalle') || el.textContent.includes('koko') || el.textContent.includes('kuntosalin') || el.textContent.includes('nyrkkeilysalin')) {
-              el.className = 'reveal-word highlighted-primary';
-            } else {
-              el.className = 'reveal-word highlighted';
-            }
-          } else {
-            el.className = 'reveal-word';
-          }
-        });
-      }
+      function onScrollReveal() {
+        const rect = textContainer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const start = windowHeight * 0.85;
+        const end = windowHeight * 0.25;
+        const progress = Math.min(Math.max((start - rect.top) / (start - end), 0), 1);
+        const countToHighlight = Math.floor(progress * wordElements.length);
+        
+        wordElements.forEach((el, index) => {
+          if (index < countToHighlight) {
+            if (el.textContent.includes('Sporttikujalle') || el.textContent.includes('koko') || el.textContent.includes('kuntosalin') || el.textContent.includes('nyrkkeilysalin')) {
+              el.className = 'reveal-word highlighted-primary';
+            } else {
+              el.className = 'reveal-word highlighted';
+            }
+          } else {
+            el.className = 'reveal-word';
+          }
+        });
+      }
 
-      window.addEventListener('scroll', onScrollReveal, { passive: true });
-      onScrollReveal();
-    }
-  </script>
+      window.addEventListener('scroll', onScrollReveal, { passive: true });
+      onScrollReveal();
+    }
+  </script>
 </body>
-</html>
+</html>          вот тот код, что мне нравится, в нем просто поменяй свои фото на мои и болдьше ничего не нужно делать
