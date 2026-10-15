@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sporttikuja – Kuntosali Herttoniemessä</title>
   
-  <!-- Шрифты Plus Jakarta Sans и Inter -->
+  <!-- Современные нео-гротески Plus Jakarta Sans и Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -45,7 +45,7 @@
       font-family: 'Inter', sans-serif;
     }
     
-    /* Слайды и плавный кинематографичный зум */
+    /* Слайды с плавным переходом и легким зумом */
     .hero-slide {
       position: absolute;
       inset: 0;
@@ -93,7 +93,7 @@
 </head>
 <body class="selection:bg-primary selection:text-white antialiased overflow-x-hidden">
 
-  <!-- ВЕРХНЯЯ ПОЛОСА: СЛОГАН И РАБОЧИЙ СТАТУС -->
+  <!-- ВЕРХНЯЯ ПОЛОСА -->
   <div class="border-b border-dark-border bg-dark-base/90 py-2.5 px-4 text-xs">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-slate-400">
       <div class="flex items-center gap-2">
@@ -113,11 +113,11 @@
     </div>
   </div>
 
-  <!-- ОСНОВНАЯ ШАПКА: ЛОГОТИП И НАВИГАЦИЯ -->
+  <!-- ШАПКА: ЛОГОТИП И НАВИГАЦИЯ -->
   <header class="sticky top-0 z-50 bg-dark-base/95 backdrop-blur-md border-b border-dark-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
       
-      <!-- Ретро-логотип Sporttikuja 1985 -->
+      <!-- Логотип Sporttikuja 1985 -->
       <a href="#" class="flex items-center gap-3 group">
         <div class="border-2 border-primary bg-dark-card px-3 py-1.5 rounded text-center transition group-hover:border-white">
           <div class="text-[9px] tracking-[0.25em] text-primary font-bold">★ HELSINKI ★</div>
@@ -126,7 +126,7 @@
         </div>
       </a>
 
-      <!-- Меню сайта (все пункты в точности) -->
+      <!-- Меню -->
       <nav class="hidden xl:flex items-center gap-6 text-sm font-medium text-slate-300">
         <a href="#etusivu" class="hover:text-primary transition text-white">Etusivu</a>
         <a href="#kuntosali" class="hover:text-primary transition">Kuntosali</a>
@@ -139,7 +139,7 @@
         <a href="#yhteystiedot" class="text-xs text-slate-400 hover:text-white transition">In English</a>
       </nav>
 
-      <!-- Правая панель с корзиной -->
+      <!-- Правая часть -->
       <div class="flex items-center gap-3">
         <a href="#hinnasto" class="flex items-center gap-2 bg-dark-surface hover:bg-dark-border border border-dark-border text-white text-xs font-semibold px-3 py-2 rounded transition">
           <i data-lucide="shopping-bag" class="w-4 h-4 text-primary"></i>
@@ -153,22 +153,21 @@
     </div>
   </header>
 
-  <!-- ГЛАВНЫЙ БАННЕР СО СМЕНОЙ 2 ТВОИХ ФОТО И НАДПИСЯМИ -->
+  <!-- ГЛАВНЫЙ БАННЕР С ТВОИМИ 2 ФОТО -->
   <section id="etusivu" class="relative h-[720px] min-h-[600px] flex items-center justify-center overflow-hidden border-b border-dark-border">
     
-    <!-- 1-е ТВОЕ ФОТО (hero-1.jpg) с запасным фоном если файл еще не добавлен -->
-    <div id="slide1" class="hero-slide active" style="background-image: url('hero-1.jpg'), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1800&auto=format&fit=crop');"></div>
+    <!-- ТВОЕ 1-е ФОТО -->
+    <div id="slide1" class="hero-slide active" style="background-image: url('hero-1.jpg');"></div>
     
-    <!-- 2-е ТВОЕ ФОТО (hero-2.jpg) с запасным фоном если файл еще не добавлен -->
-    <div id="slide2" class="hero-slide" style="background-image: url('hero-2.jpg'), url('https://images.unsplash.com/photo-1549060279-7e168fcee0c2?q=80&w=1800&auto=format&fit=crop');"></div>
+    <!-- ТВОЕ 2-е ФОТО -->
+    <div id="slide2" class="hero-slide" style="background-image: url('hero-2.jpg');"></div>
 
-    <!-- Градиент затемнения -->
+    <!-- Затемнение -->
     <div class="hero-overlay z-10"></div>
 
-    <!-- Текстовое наполнение слайдера -->
+    <!-- Текстовый блок -->
     <div class="relative z-20 max-w-4xl mx-auto px-4 text-center">
       
-      <!-- Бейдж сменяемого тезиса -->
       <div class="inline-flex items-center gap-2 bg-dark-base/90 border border-primary/40 px-4 py-1.5 rounded-full mb-6 text-primary text-xs font-bold tracking-widest uppercase">
         <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
         <span id="sliderBadge">EI SITOUTUMISPAKKOA</span>
@@ -191,7 +190,7 @@
         </a>
       </div>
 
-      <!-- Переключатели слайдов -->
+      <!-- Кнопки слайдов -->
       <div class="flex justify-center items-center gap-3 mt-12">
         <button onclick="setSlide(0)" id="dot0" class="h-2 w-8 bg-primary rounded-full transition-all" aria-label="Slide 1"></button>
         <button onclick="setSlide(1)" id="dot1" class="h-2 w-2 bg-slate-600 hover:bg-slate-400 rounded-full transition-all" aria-label="Slide 2"></button>
@@ -200,19 +199,17 @@
     </div>
   </section>
 
-  <!-- СЕКЦИЯ 1: TERVETULOA TREENAAMAAN SPORTTIKUJALLE (С ПОДСВЕТКОЙ ПРИ СКРОЛЛЕ) -->
+  <!-- СЕКЦИЯ 1: TERVETULOA TREENAAMAAN SPORTTIKUJALLE (ПОДСВЕТКА СЛОВ ПРИ СКРОЛЛЕ) -->
   <section class="py-24 px-4 sm:px-6 max-w-5xl mx-auto relative tech-grid">
     <div class="text-xs uppercase font-bold tracking-widest text-primary mb-3">// 01. Esittely</div>
     <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight mb-8">
       Tervetuloa treenaamaan Sporttikujalle
     </h2>
 
-    <!-- Текст с подсветкой каждого слова при скроллинге -->
     <div id="scrollRevealText" class="text-xl sm:text-2xl lg:text-3xl font-medium leading-relaxed mb-10 text-slate-400">
       Olemme koko perheen treenipaikka, ja tilamme sijaitsevat Herttoniemenrannassa liikuntapuistossa ja ne käsittävät hyvin ilmastoidun kuntosalin, nyrkkeilysalin, kahvilan, urheiluväline- ja lisäravinnekaupan, siistit pukuhuoneet, täysin uudistetut suihkutilat ja saunat.
     </div>
 
-    <!-- Информационная плашка саун и графика -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-dark-border">
       <div class="bg-dark-card border border-dark-border p-5 rounded-lg flex items-start gap-4">
         <div class="p-2.5 rounded bg-dark-surface text-primary border border-dark-border">
@@ -254,7 +251,6 @@
             Sporttikujan kuntosali soveltuu niin kuntoilijan kuin tosiurheilijankin tarpeisiin. Meiltä löydät kattavan valikoiman laadukkaita laitteita, vapaita painoja sekä tilaa toiminnalliseen harjoitteluun.
           </p>
 
-          <!-- Отзывы -->
           <div class="space-y-4 pt-4">
             <div class="border-l-2 border-primary pl-4 py-1 bg-dark-surface/60 rounded-r p-4">
               <p class="text-sm text-slate-200 italic mb-2">
@@ -272,7 +268,6 @@
           </div>
         </div>
 
-        <!-- Фото зала -->
         <div class="lg:col-span-6">
           <div class="relative rounded-lg overflow-hidden border border-dark-border group">
             <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop" alt="Sporttikuja kuntosali" class="w-full h-[420px] object-cover transition duration-700 group-hover:scale-105">
@@ -311,7 +306,6 @@
             Haasta itsesi ja ilmoittaudu kurssille! Kuntonyrkkeilyä aloittelijoille ja kokeneille harrastajille, kilpanyrkkeilyä ja junnuboxingia 12–16v. nuorille.
           </p>
 
-          <!-- Блок сеньоров -->
           <div class="bg-dark-card border border-dark-border p-5 rounded-lg">
             <h3 class="font-display font-bold text-white text-base mb-1">Sporttikujalla myös ryhmäliikuntaa!</h3>
             <p class="text-sm text-slate-400">
@@ -330,7 +324,7 @@
     </div>
   </section>
 
-  <!-- СЕКЦИЯ 4: PALVELUT (ВСЕ 6 УСЛУГ В ТОЧНОСТИ) -->
+  <!-- СЕКЦИЯ 4: PALVELUT -->
   <section id="palvelut" class="py-20 border-t border-dark-border bg-dark-card">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex flex-wrap items-end justify-between gap-4 mb-12">
@@ -343,7 +337,6 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- 1. Kuntosali -->
         <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
           <div class="h-44 overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop" alt="Kuntosali" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -356,7 +349,6 @@
           </div>
         </div>
 
-        <!-- 2. Nyrkkeilysali -->
         <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
           <div class="h-44 overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=600&auto=format&fit=crop" alt="Nyrkkeilysali" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -369,7 +361,6 @@
           </div>
         </div>
 
-        <!-- 3. Siistit pukuhuoneet -->
         <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
           <div class="h-44 overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop" alt="Siistit pukuhuoneet" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -382,7 +373,6 @@
           </div>
         </div>
 
-        <!-- 4. Suihkutilat ja saunat -->
         <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
           <div class="h-44 overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=600&auto=format&fit=crop" alt="Saunatilat" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -395,7 +385,6 @@
           </div>
         </div>
 
-        <!-- 5. Kahvila ja urheilukauppa -->
         <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
           <div class="h-44 overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600&auto=format&fit=crop" alt="Kahvila ja urheilukauppa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -408,7 +397,6 @@
           </div>
         </div>
 
-        <!-- 6. Personal training -palvelut -->
         <div class="bg-dark-surface border border-dark-border rounded-lg overflow-hidden group">
           <div class="h-44 overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=600&auto=format&fit=crop" alt="Personal training" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -425,7 +413,7 @@
     </div>
   </section>
 
-  <!-- СЕКЦИЯ 5: AJANKOHTAISTA (ВСЕ 10 НОВОСТЕЙ КЛУБА) -->
+  <!-- СЕКЦИЯ 5: AJANKOHTAISTA (ВСЕ 10 НОВОСТЕЙ) -->
   <section id="ajankohtaista" class="py-20 border-t border-dark-border bg-dark-base">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="mb-10">
@@ -495,12 +483,11 @@
     </div>
   </section>
 
-  <!-- СЕКЦИЯ 6 & 7: MAKSUTAVAT & HUOMIO TREENAAJAT (ЧАСЫ ПИК) -->
+  <!-- СЕКЦИЯ 6 & 7: MAKSUTAVAT & HUOMIO TREENAAJAT -->
   <section id="hinnasto" class="py-20 border-t border-dark-border bg-dark-card">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         
-        <!-- Способы оплаты -->
         <div class="bg-dark-surface border border-dark-border p-8 rounded-lg">
           <div class="text-xs uppercase font-bold tracking-widest text-primary mb-2">// Maksutavat</div>
           <h3 class="font-display font-extrabold text-2xl text-white mb-4">Maksutavat paikan päällä</h3>
@@ -516,7 +503,6 @@
           </div>
         </div>
 
-        <!-- Часы пик -->
         <div class="bg-dark-surface border border-dark-border p-8 rounded-lg">
           <div class="text-xs uppercase font-bold tracking-widest text-primary mb-2">// Ruuhka-ajat</div>
           <h3 class="font-display font-extrabold text-2xl text-white mb-4">Huomio treenaajat!</h3>
@@ -540,7 +526,6 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- Адрес и контакты -->
         <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
           <h3 class="font-display font-bold text-white text-lg mb-4">Sporttikuja</h3>
           <p class="text-sm text-slate-300 mb-2">Paasivaarankatu 3<br>00810, Helsinki</p>
@@ -558,7 +543,6 @@
           </div>
         </div>
 
-        <!-- Часы работы ресепшена -->
         <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
           <h3 class="font-display font-bold text-white text-lg mb-4">Vastaanoton aukioloajat</h3>
           <div class="space-y-2 text-sm text-slate-300">
@@ -586,7 +570,6 @@
           </div>
         </div>
 
-        <!-- Транспорт -->
         <div class="bg-dark-card border border-dark-border p-6 rounded-lg">
           <h3 class="font-display font-bold text-white text-lg mb-4">Julkisilla Sporttikujalle</h3>
           <div class="space-y-3 text-xs text-slate-300">
@@ -616,7 +599,7 @@
     </div>
   </section>
 
-  <!-- ПОДВАЛ СО ВСЕМИ ССЫЛКАМИ ОРИГИНАЛЬНОГО САЙТА -->
+  <!-- ПОДВАЛ -->
   <footer class="border-t border-dark-border bg-dark-base py-10 px-4 text-xs text-slate-400">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
       <div>
@@ -631,25 +614,14 @@
     </div>
   </footer>
 
-  <!-- СКРИПТ: СМЕНА ФОТО ГЛАВНОГО БАННЕРА + ПОДСВЕТКА СЛОВ ПРИ СКРОЛЛЕ -->
+  <!-- СКРИПТ: СМЕНА ФОТО И ПОДСВЕТКА СЛОВ -->
   <script>
-    // Инициализация иконок Lucide
     lucide.createIcons();
 
-    // 1. СЛАЙДЕР ДВУХ ТВОИХ ФОТО И НАДПИСЕЙ
     const slidesData = [
-      {
-        badge: "EI SITOUTUMISPAKKOA",
-        title: "Täyden palvelun kuntokeskus"
-      },
-      {
-        badge: "EI JÄSENYYS- TAI LIITTYMISPAKKOA",
-        title: "Kuntosali Herttoniemessä"
-      },
-      {
-        badge: "EI SUORAVELOITUSSOPIMUKSIA",
-        title: "Nyrkkeilysali & Kuntoilu"
-      }
+      { badge: "EI SITOUTUMISPAKKOA", title: "Täyden palvelun kuntokeskus" },
+      { badge: "EI JÄSENYYS- TAI LIITTYMISPAKKOA", title: "Kuntosali Herttoniemessä" },
+      { badge: "EI SUORAVELOITUSSOPIMUKSIA", title: "Nyrkkeilysali & Kuntoilu" }
     ];
 
     let currentSlide = 0;
@@ -661,7 +633,6 @@
     function setSlide(index) {
       currentSlide = index;
       
-      // Чередование 2 твоих фото
       if (index % 2 === 0) {
         slide1.classList.add('active');
         slide2.classList.remove('active');
@@ -670,11 +641,9 @@
         slide1.classList.remove('active');
       }
 
-      // Обновление текстов
       badgeEl.textContent = slidesData[index].badge;
       titleEl.textContent = slidesData[index].title;
 
-      // Обновление индикаторов
       for (let i = 0; i < 3; i++) {
         const dot = document.getElementById(`dot${i}`);
         if (i === index) {
@@ -685,20 +654,18 @@
       }
     }
 
-    // Автоматическая смена фото каждые 5 секунд
     setInterval(() => {
       let next = (currentSlide + 1) % slidesData.length;
       setSlide(next);
     }, 5000);
 
-
-    // 2. ПОДСВЕТКА ТЕКСТА ПРИ СКРОЛЛЕ (GRAFIT & SMARTASS STYLE)
+    // Скролл-подсветка
     const textContainer = document.getElementById('scrollRevealText');
     if (textContainer) {
       const rawWords = textContainer.innerText.trim().split(/\s+/);
       textContainer.innerHTML = '';
       
-      const wordElements = rawWords.map((word, i) => {
+      const wordElements = rawWords.map((word) => {
         const span = document.createElement('span');
         span.className = 'reveal-word';
         span.textContent = word;
@@ -709,17 +676,13 @@
       function onScrollReveal() {
         const rect = textContainer.getBoundingClientRect();
         const windowHeight = window.innerHeight;
-        
-        // Прогресс скролла внутри блока
         const start = windowHeight * 0.85;
         const end = windowHeight * 0.25;
         const progress = Math.min(Math.max((start - rect.top) / (start - end), 0), 1);
-        
         const countToHighlight = Math.floor(progress * wordElements.length);
         
         wordElements.forEach((el, index) => {
           if (index < countToHighlight) {
-            // Подсветка ключевых слов оранжевым
             if (el.textContent.includes('Sporttikujalle') || el.textContent.includes('koko') || el.textContent.includes('kuntosalin') || el.textContent.includes('nyrkkeilysalin')) {
               el.className = 'reveal-word highlighted-primary';
             } else {
