@@ -180,37 +180,39 @@
   </nav>
 
   <!-- ================= HERO SLIDER SECTION (EXACT ORIGINAL BANNER STATEMENTS) ================= -->
-  <section id="etusivu" class="relative overflow-hidden border-b border-brand-border min-h-[540px] flex items-center">
+  <section id="etusivu" class="relative overflow-hidden border-b border-brand-border min-h-[560px] flex items-center">
     
-    <!-- Hero Background Images (Dynamic Slider with your 2 photos) -->
+    <!-- Hero Background Images (Clearer brightness & softer gradient) -->
     <div class="absolute inset-0 z-0">
       <img id="heroSlideImg" 
            src="hero-1.jpg" 
            alt="Sporttikuja kuntosali" 
-           class="w-full h-full object-cover object-center brightness-[0.38] transition-all duration-700">
-      <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/60 to-transparent"></div>
+           class="w-full h-full object-cover object-center brightness-[0.75] contrast-[1.05] transition-all duration-700">
+      <!-- Деликатный полупрозрачный градиент для читаемости текста -->
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-black/95 via-transparent to-black/35"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-black/80 via-brand-black/40 to-transparent"></div>
     </div>
 
     <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 w-full">
       
       <!-- Slider Content Container -->
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-black/60 backdrop-blur border border-brand-orange/40 text-brand-orange text-xs font-mono font-semibold mb-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-black/75 backdrop-blur border border-brand-orange/40 text-brand-orange text-xs font-mono font-semibold mb-6">
           <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
           <span id="sliderBadge">HERTTONIEMENRANTA</span>
         </div>
 
         <!-- Dynamic Slide Header -->
-        <h1 id="sliderTitle" class="font-heading font-extrabold text-3xl sm:text-5xl md:text-6xl text-white tracking-tight leading-[1.1] mb-4">
+        <h1 id="sliderTitle" class="font-heading font-extrabold text-3xl sm:text-5xl md:text-6xl text-white tracking-tight leading-[1.1] mb-4 drop-shadow-md">
           EI SITOUTUMISPAKKOA
         </h1>
 
         <!-- Dynamic Subtitle Box -->
-        <div id="sliderSubtitle" class="inline-block px-4 py-2 bg-black/70 backdrop-blur border-l-4 border-brand-orange text-sm sm:text-base md:text-lg font-medium text-slate-200 tracking-wide mb-8">
+        <div id="sliderSubtitle" class="inline-block px-4 py-2 bg-black/80 backdrop-blur border-l-4 border-brand-orange text-sm sm:text-base md:text-lg font-medium text-slate-100 tracking-wide mb-8">
           TÄYDEN PALVELUN KUNTOKESKUS
         </div>
 
-        <p class="text-sm sm:text-base text-slate-300 max-w-xl leading-relaxed mb-8">
+        <p class="text-sm sm:text-base text-slate-200 max-w-xl leading-relaxed mb-8 drop-shadow">
           Aito ja rento treenipaikka Herttoniemenrannan liikuntapuistossa. Kuntosali, kuntonyrkkeily, sauna ja valmennus saman katon alla.
         </p>
 
@@ -220,16 +222,16 @@
             <span>Tutustu hinnastoon</span>
             <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
-          <a href="#kuntosali" class="px-6 py-3 bg-black/60 hover:bg-black/90 border border-slate-700 text-white text-xs sm:text-sm font-semibold rounded transition">
+          <a href="#kuntosali" class="px-6 py-3 bg-black/70 hover:bg-black/90 border border-slate-600 text-white text-xs sm:text-sm font-semibold rounded transition">
             Lue lisää salista
           </a>
 
           <!-- Prev/Next Controls -->
           <div class="flex items-center gap-2 sm:ml-auto">
-            <button id="prevSlideBtn" class="w-10 h-10 rounded bg-black/60 border border-slate-700 hover:border-brand-orange text-white flex items-center justify-center transition" aria-label="Edellinen dia">
+            <button id="prevSlideBtn" class="w-10 h-10 rounded bg-black/70 border border-slate-600 hover:border-brand-orange text-white flex items-center justify-center transition" aria-label="Edellinen dia">
               <i class="fa-solid fa-arrow-left text-xs"></i>
             </button>
-            <button id="nextSlideBtn" class="w-10 h-10 rounded bg-black/60 border border-slate-700 hover:border-brand-orange text-white flex items-center justify-center transition" aria-label="Seuraava dia">
+            <button id="nextSlideBtn" class="w-10 h-10 rounded bg-black/70 border border-slate-600 hover:border-brand-orange text-white flex items-center justify-center transition" aria-label="Seuraava dia">
               <i class="fa-solid fa-arrow-right text-xs"></i>
             </button>
           </div>
@@ -296,7 +298,7 @@
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- Left Photo: Authentic gym weights/squat rack -->
+        <!-- Left Photo -->
         <div class="lg:col-span-6 relative rounded-xl overflow-hidden border border-brand-border group">
           <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop" 
                alt="Sporttikuja kuntosali laitteet" 
@@ -393,7 +395,7 @@
           </div>
         </div>
 
-        <!-- Right Photo: Authentic Boxing Gloves & Bags -->
+        <!-- Right Photo -->
         <div class="lg:col-span-6 relative rounded-xl overflow-hidden border border-brand-border group order-1 lg:order-2">
           <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1200&auto=format&fit=crop" 
                alt="Sporttikuja nyrkkeilysali säkit" 
