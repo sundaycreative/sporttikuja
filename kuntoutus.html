@@ -140,7 +140,7 @@
   <main class="flex-grow py-12 sm:py-20 bg-[#08080a] border-b border-brand-border">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
-      <!-- Кнопка возврата -->
+      <!-- Кнопка возврата на главную -->
       <div class="mb-6">
         <a href="index.html" class="inline-flex items-center gap-2 text-xs font-mono text-brand-orange hover:text-white transition">
           <i class="fa-solid fa-arrow-left"></i>
@@ -148,7 +148,7 @@
         </a>
       </div>
 
-      <!-- Заголовок страницы -->
+      <!-- Заголовок страницы со скриншота -->
       <div class="mb-10 text-center sm:text-left">
         <span class="font-mono text-xs text-brand-orange font-semibold uppercase tracking-wider block mb-2">// Osa 05</span>
         <h1 class="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
@@ -157,7 +157,7 @@
         <p class="text-sm text-slate-400 mt-2">Toiminnallinen hieronta, liikevalmennus ja jäsenkorjaus Sporttikujalla.</p>
       </div>
 
-      <!-- Главная сетка: текст слева, скошенное фото справа -->
+      <!-- Главная сетка: текст слева, стандартное красивое фото справа -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
         <!-- Левая часть: весь оригинальный текст -->
@@ -231,17 +231,16 @@
 
         </div>
 
-        <!-- Правая часть: скошенное фото кушетки без белых рамок -->
+        <!-- Правая часть: стандартное аккуратное фото со скруглением и тенью -->
         <div class="lg:col-span-5 flex flex-col items-center justify-center">
-          <div class="w-full max-w-[440px] overflow-hidden rounded-xl bg-transparent" style="transform: skewX(-7deg);">
+          <div class="relative w-full rounded-2xl overflow-hidden border border-brand-border shadow-2xl group">
             <img src="kuntoutus-main.jpg" 
                  alt="Nivelputiikki hierontaklinikka" 
-                 class="w-full h-auto object-cover scale-[1.12] transition-transform duration-500 hover:scale-[1.18]"
-                 style="transform: skewX(7deg);">
-          </div>
-          <div class="mt-4 text-center">
-            <span class="text-xs font-mono text-brand-orange">Nivelputiikki</span>
-            <span class="text-xs font-mono text-slate-400"> • Teemu Saharinen & Keijo</span>
+                 class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-3 left-4 right-4 text-xs font-mono text-slate-300">
+              <span class="text-brand-orange font-bold">Nivelputiikki</span> • Teemu Saharinen & Keijo
+            </div>
           </div>
         </div>
 
