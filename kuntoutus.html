@@ -57,16 +57,10 @@
       background-color: #151924;
       transform: translateY(-2px);
     }
-
-    /* Точная форма скошенного параллелограмма как на оригинальном сайте */
-    .slanted-shape {
-      clip-path: polygon(14% 0%, 100% 0%, 86% 100%, 0% 100%);
-      -webkit-clip-path: polygon(14% 0%, 100% 0%, 86% 100%, 0% 100%);
-    }
   </style>
 </head>
 
-<body class="bg-brand-black text-slate-100 font-sans antialiased selection:bg-brand-orange selection:text-white flex flex-col min-h-screen">
+<body class="bg-[#08080a] text-slate-100 font-sans antialiased selection:bg-brand-orange selection:text-white flex flex-col min-h-screen">
 
   <!-- ВЕРХНЯЯ СТРОКА: ЛОГОТИП + СЛОГАН -->
   <div class="border-b border-brand-border bg-[#0b0d13]">
@@ -132,3 +126,162 @@
       <a href="index.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Etusivu</a>
       <a href="kuntosali.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntosali</a>
       <a href="valmennus.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Valmennus</a>
+      <a href="kuntonyrkkeily.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntonyrkkeily</a>
+      <a href="kuntoutus.html" class="block py-1 text-brand-orange font-semibold mob-link">Kuntoutus</a>
+      <a href="hinnasto.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Hinnasto</a>
+      <a href="ajankohtaista.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Ajankohtaista</a>
+      <a href="yhteystiedot.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Yhteystiedot</a>
+      <a href="yhteistyo.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Yhteistyö</a>
+      <a href="in-english.html" class="block py-1 text-slate-400 mob-link">In English</a>
+    </div>
+  </nav>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ СТРАНИЦЫ KUNTOUTUS -->
+  <main class="flex-grow py-12 sm:py-20 bg-[#08080a] border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <!-- Кнопка возврата -->
+      <div class="mb-6">
+        <a href="index.html" class="inline-flex items-center gap-2 text-xs font-mono text-brand-orange hover:text-white transition">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Palaa etusivulle</span>
+        </a>
+      </div>
+
+      <!-- Заголовок страницы -->
+      <div class="mb-10 text-center sm:text-left">
+        <span class="font-mono text-xs text-brand-orange font-semibold uppercase tracking-wider block mb-2">// Osa 05</span>
+        <h1 class="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
+          NIVELPUTIIKKI
+        </h1>
+        <p class="text-sm text-slate-400 mt-2">Toiminnallinen hieronta, liikevalmennus ja jäsenkorjaus Sporttikujalla.</p>
+      </div>
+
+      <!-- Главная сетка: текст слева, скошенное фото справа -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Левая часть: весь оригинальный текст -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div>
+            <h2 class="font-heading font-extrabold text-lg sm:text-xl text-lime-400 tracking-tight uppercase mb-3">
+              KOKO PERHEEN HIERONTAKLINIKKA
+            </h2>
+            <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+              Koko perheen hierontaklinikka Nivelputiikki tarjoaa yksilölliset ja kokonaisvaltaiset toiminnallisen hieronnan, kuntouttavan liikevalmennuksen ja jäsenkorjauksen palvelut Sporttikujalla. Olemme erikoistuneet etenkin tilanteisiin, kun ikävämmän tapaturman, leikkauksen tai vanhan vamman vuoksi kehon toimintaan on jäänyt epämiellyttäviä toimintamuutoksia.
+            </p>
+          </div>
+
+          <!-- Прием Теему -->
+          <div class="clean-card p-5 rounded-xl space-y-2 border-l-2 border-l-brand-orange">
+            <h3 class="font-heading font-bold text-sm text-white flex items-center gap-2">
+              <i class="fa-solid fa-user-doctor text-brand-orange"></i>
+              <span>Teemun toiminnallinen hieronta</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Teemun toiminnallisen hieronnan vastaanotto torstaisin sekä vuoroviikoin keskiviikkoisin ja perjantaisin klo 12 – 19. Kroppa tasapainoon liikevalmennusryhmät vastaanottopäivinä klo 11-12. Tilauksesta myös 1-2hlö liikevalmennusohjelmat.
+            </p>
+          </div>
+
+          <!-- Прием Кейо -->
+          <div class="clean-card p-5 rounded-xl space-y-2 border-l-2 border-l-brand-orange">
+            <h3 class="font-heading font-bold text-sm text-white flex items-center gap-2">
+              <i class="fa-solid fa-hand-holding-medical text-brand-orange"></i>
+              <span>Keijon jäsenkorjaus</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Keijon jäsenkorjaus vastaanotto tiistaisin klo 12-19. Jäsenkorjaus on tehokas mutta lempeä vanhaan suomalaiseen kansanperintekulttuuriin perustuva mobilisaatiohoitomuoto.
+            </p>
+          </div>
+
+          <!-- Ссылки -->
+          <div class="pt-2 space-y-3">
+            
+            <!-- 1. Неактивная ссылка -->
+            <div class="p-3.5 rounded-lg bg-brand-surface border border-brand-border">
+              <span class="text-xs font-mono text-slate-400 block mb-1">Ajanvaraus nettiajanvarauksesta:</span>
+              <span class="inline-flex items-center gap-2 text-slate-400 font-semibold text-xs sm:text-sm cursor-not-allowed">
+                <i class="fa-regular fa-calendar-xmark text-slate-500"></i>
+                <span>Nivelputiikin ajanvaraus</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-slate-400 border border-slate-700">Paikan päällä / ryhmästä</span>
+              </span>
+            </div>
+
+            <!-- 2. Активная ссылка Facebook -->
+            <div class="p-3.5 rounded-lg bg-brand-surface border border-brand-border hover:border-brand-orange transition">
+              <span class="text-xs font-mono text-slate-400 block mb-1">Ajankohtaiset uutiset ja toiminnan esittelyä voit seurata myös facebook-ryhmästä:</span>
+              <a href="https://www.facebook.com/groups/437650339371661" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-brand-orange hover:text-white font-mono font-bold text-xs sm:text-sm underline underline-offset-4 transition">
+                <i class="fa-brands fa-facebook"></i>
+                <span>Sporttikujan kuntoutus by Nivelputiikki</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+
+            <!-- 3. Активная ссылка tshealth.fi -->
+            <div class="p-3.5 rounded-lg bg-brand-surface border border-brand-border hover:border-brand-orange transition">
+              <span class="text-xs font-mono text-slate-400 block mb-1">Kotisivut:</span>
+              <a href="https://www.tshealth.fi/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-brand-orange hover:text-white font-mono font-bold text-xs sm:text-sm underline underline-offset-4 transition">
+                <i class="fa-solid fa-globe"></i>
+                <span>www.tshealth.fi</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Правая часть: скошенное фото кушетки без белых рамок -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center">
+          <div class="w-full max-w-[440px] overflow-hidden rounded-xl bg-transparent" style="transform: skewX(-7deg);">
+            <img src="kuntoutus-main.jpg" 
+                 alt="Nivelputiikki hierontaklinikka" 
+                 class="w-full h-auto object-cover scale-[1.12] transition-transform duration-500 hover:scale-[1.18]"
+                 style="transform: skewX(7deg);">
+          </div>
+          <div class="mt-4 text-center">
+            <span class="text-xs font-mono text-brand-orange">Nivelputiikki</span>
+            <span class="text-xs font-mono text-slate-400"> • Teemu Saharinen & Keijo</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="bg-[#050608] py-12 text-xs text-slate-500 border-t border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-brand-border">
+        <div class="font-heading font-black text-white text-base tracking-tight">
+          SPORTTI<span class="text-brand-orange">KUJA</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#" class="hover:text-white transition">Tietosuojaseloste</a>
+          <a href="#" class="hover:text-white transition">Verkkokaupan toimitusehdot</a>
+          <a href="#" class="hover:text-white transition">Oiva-raportit</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
+        <div>Kotisivut yritykselle toteutti Geeky Panda.</div>
+        <div>© <span id="yearSpanKunt"></span> Sporttikuja. Kaikki oikeudet pidätetään.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yearSpanKunt').textContent = new Date().getFullYear();
+
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobLinks = document.querySelectorAll('.mob-link');
+
+    if (mobileBtn && mobileDrawer) {
+      mobileBtn.addEventListener('click', () => { mobileDrawer.classList.toggle('hidden'); });
+      mobLinks.forEach(link => { link.addEventListener('click', () => mobileDrawer.classList.add('hidden')); });
+    }
+  </script>
+</body>
+</html>
