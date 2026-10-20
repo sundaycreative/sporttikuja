@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-[#08080a] text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In English — Sporttikuja Gym Herttoniemi</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#08080a',
+              surface: '#0f1117',
+              card: '#141720',
+              cardHover: '#191d29',
+              border: '#1f2433',
+              borderLight: '#2b3246',
+              orange: '#ff5500',
+              orangeHover: '#e64d00',
+              orangeSoft: 'rgba(255, 85, 0, 0.12)',
+              textPrimary: '#ffffff',
+              textSecondary: '#94a3b8',
+              textMuted: '#64748b'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #08080a; }
+    ::-webkit-scrollbar-thumb { background: #252b3d; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #ff5500; }
+
+    .clean-card {
+      background-color: #11141c;
+      border: 1px solid #1c2230;
+      transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    }
+    .clean-card:hover {
+      border-color: #ff5500;
+      background-color: #151924;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-black text-slate-100 font-sans antialiased selection:bg-brand-orange selection:text-white flex flex-col min-h-screen">
+
+  <!-- TOP HEADER: LOGO + MOTTO -->
+  <div class="border-b border-brand-border bg-[#0b0d13]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="relative flex flex-col items-center justify-center px-4 py-1.5 rounded bg-brand-surface border border-brand-border group-hover:border-brand-orange transition">
+          <div class="flex items-center gap-1.5 text-[9px] font-mono tracking-widest text-brand-orange font-bold uppercase">
+            <span>★</span><span>Helsinki</span><span>★</span>
+          </div>
+          <span class="font-heading font-black text-2xl tracking-tighter text-white uppercase leading-none mt-0.5">
+            SPORTTI<span class="text-brand-orange">KUJA</span>
+          </span>
+          <div class="text-[9px] font-mono tracking-widest text-slate-400 font-semibold uppercase mt-0.5">
+            19 • ESTB • 85
+          </div>
+        </div>
+      </a>
+
+      <div class="text-center md:text-right">
+        <p class="font-heading italic text-xs sm:text-sm text-slate-300 tracking-wide">
+          ”Pidä huolta temppelistäsi, niin temppeli pitää huolta sinusta”.
+        </p>
+        <span class="text-[11px] font-mono text-brand-orange block mt-0.5">Herttoniemenranta • Helsinki</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-[#090b10]/95 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+      <div class="hidden xl:flex items-center gap-5 text-[13px] font-medium text-slate-300">
+        <a href="index.html" class="hover:text-brand-orange transition-colors">Etusivu</a>
+        <a href="kuntosali.html" class="hover:text-brand-orange transition-colors">Kuntosali</a>
+        <a href="valmennus.html" class="hover:text-brand-orange transition-colors">Valmennus</a>
+        <a href="kuntonyrkkeily.html" class="hover:text-brand-orange transition-colors">Kuntonyrkkeily</a>
+        <a href="kuntoutus.html" class="hover:text-brand-orange transition-colors">Kuntoutus</a>
+        <a href="hinnasto.html" class="hover:text-brand-orange transition-colors">Hinnasto</a>
+        <a href="ajankohtaista.html" class="hover:text-brand-orange transition-colors">Ajankohtaista</a>
+        <a href="yhteystiedot.html" class="hover:text-brand-orange transition-colors">Yhteystiedot</a>
+        <a href="yhteystiedot.html" class="hover:text-brand-orange transition-colors">Yhteistyö</a>
+        <a href="in-english.html" class="text-brand-orange font-semibold">In English</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div class="hidden sm:flex items-center gap-3 text-slate-400 text-sm border-r border-brand-border pr-4">
+          <a href="https://facebook.com" target="_blank" rel="noreferrer" class="hover:text-brand-orange transition"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" class="hover:text-brand-orange transition"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <a href="hinnasto.html" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-brand-surface hover:bg-brand-orange text-white text-xs font-semibold border border-brand-border transition-colors group">
+          <span>Verkkokauppa</span>
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-brand-orange group-hover:bg-black text-[11px] font-mono font-bold text-white">0</span>
+        </a>
+
+        <button id="mobileMenuBtn" class="xl:hidden p-2 text-slate-400 hover:text-white" aria-label="Menu">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="hidden xl:hidden bg-brand-surface border-b border-brand-border px-5 py-4 space-y-2.5 text-sm font-medium">
+      <a href="index.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Etusivu</a>
+      <a href="kuntosali.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntosali</a>
+      <a href="valmennus.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Valmennus</a>
+      <a href="kuntonyrkkeily.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntonyrkkeily</a>
+      <a href="kuntoutus.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntoutus</a>
+      <a href="hinnasto.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Hinnasto</a>
+      <a href="ajankohtaista.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Ajankohtaista</a>
+      <a href="yhteystiedot.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Yhteystiedot</a>
+      <a href="yhteystiedot.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Yhteistyö</a>
+      <a href="in-english.html" class="block py-1 text-brand-orange font-semibold mob-link">In English</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT: IN ENGLISH -->
+  <main class="flex-grow py-12 sm:py-20 bg-brand-black border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <!-- Back Link -->
+      <div class="mb-6">
+        <a href="index.html" class="inline-flex items-center gap-2 text-xs font-mono text-brand-orange hover:text-white transition">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Return to front page</span>
+        </a>
+      </div>
+
+      <!-- Page Heading -->
+      <div class="mb-10">
+        <span class="font-mono text-xs text-brand-orange font-semibold uppercase tracking-wider block mb-2">// In English</span>
+        <h1 class="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
+          ABOUT SPORTTIKUJA
+        </h1>
+        <p class="text-sm text-slate-400 mt-2">Full-service gym and fitness center located in Herttoniemi, Helsinki.</p>
+      </div>
+
+      <!-- MAIN GRID: CONTENT (LEFT) + SIDEBAR (RIGHT) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- LEFT COLUMN: ENGLISH CONTENT FROM SCREENSHOTS -->
+        <div class="lg:col-span-8 space-y-10">
+          
+          <!-- 1. RECEPTION OPENING HOURS -->
+          <div class="clean-card p-6 sm:p-8 rounded-2xl space-y-5 border-l-4 border-l-brand-orange">
+            <h2 class="font-heading font-extrabold text-xl sm:text-2xl text-lime-400 tracking-tight uppercase">
+              RECEPTION OPENING HOURS:
+            </h2>
+
+            <div class="space-y-2 font-mono text-sm sm:text-base text-slate-200">
+              <div class="flex justify-between border-b border-brand-border/60 py-1.5">
+                <span class="text-slate-300">Monday</span>
+                <span class="font-bold text-white">12-20</span>
+              </div>
+              <div class="flex justify-between border-b border-brand-border/60 py-1.5">
+                <span class="text-slate-300">Tuesday</span>
+                <span class="font-bold text-white">12-19</span>
+              </div>
+              <div class="flex justify-between border-b border-brand-border/60 py-1.5">
+                <span class="text-slate-300">Wednesday</span>
+                <span class="font-bold text-white">12-19</span>
+              </div>
+              <div class="flex justify-between border-b border-brand-border/60 py-1.5">
+                <span class="text-slate-300">Thursday</span>
+                <span class="font-bold text-white">12-19</span>
+              </div>
+              <div class="flex justify-between border-b border-brand-border/60 py-1.5">
+                <span class="text-slate-300">Friday</span>
+                <span class="font-bold text-white">12-17</span>
+              </div>
+              <div class="flex justify-between py-1.5 text-slate-400">
+                <span class="font-bold text-white">Saturday closed</span>
+                <span>no customer service</span>
+              </div>
+              <div class="flex justify-between py-1.5 text-slate-400">
+                <span class="font-bold text-white">Sunday closed</span>
+                <span>no customer service</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-orangeSoft/60 border border-brand-orange/40 text-xs font-mono text-brand-orange font-semibold">
+              Gym card access: workout every day from 05:00 to 24:00 (365 days a year).
+            </div>
+          </div>
+
+          <!-- 2. PRICES & FOR STUDENTS/PENSIONERS -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Standard Prices -->
+            <div class="clean-card p-6 rounded-2xl space-y-4">
+              <h3 class="font-heading font-extrabold text-lg text-lime-400 tracking-tight uppercase pb-2 border-b border-brand-border">
+                PRICES
+              </h3>
+
+              <div class="space-y-2.5 font-mono text-xs sm:text-sm text-slate-200">
+                <div class="flex justify-between py-1 border-b border-brand-border/40">
+                  <span>1 month</span> <span class="font-bold text-white">45€</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-brand-border/40">
+                  <span>3 months</span> <span class="font-bold text-white">120€</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-brand-border/40">
+                  <span>6 months</span> <span class="font-bold text-white">220€</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-brand-border/40">
+                  <span>12 months</span> <span class="font-bold text-brand-orange">430€</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-brand-border/40">
+                  <span>one time</span> <span class="font-bold text-white">10€</span>
+                </div>
+                <div class="flex justify-between py-1">
+                  <span>Gym card (5-24 every day)</span> <span class="font-bold text-white">10€</span>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-lg bg-black/60 border border-brand-border text-[11px] text-slate-300 leading-relaxed font-sans">
+                <strong class="text-brand-orange">NOTICE!</strong> One-time payment only for card and you must show your ID to the staff.
+              </div>
+            </div>
+
+            <!-- Student / Pensioner Prices -->
+            <div class="clean-card p-6 rounded-2xl space-y-4">
+              <h3 class="font-heading font-extrabold text-lg text-lime-400 tracking-tight uppercase pb-2 border-b border-brand-border">
+                FOR STUDENTS/PENSIONERS
+              </h3>
+
+              <div class="space-y-2.5 font-mono text-xs sm:text-sm text-slate-200">
+                <div class="flex justify-between py-1 border-b border-brand-border/40">
+                  <span>1 month</span> <span class="font-bold text-white">39€</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-brand-border/40">
+                  <span>3 months</span> <span class="font-bold text-white">105€</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-brand-border/40">
+                  <span>6 months</span> <span class="font-bold text-white">190€</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-brand-border/40">
+                  <span>12 months</span> <span class="font-bold text-brand-orange">350€</span>
+                </div>
+                <div class="flex justify-between py-1">
+                  <span>one time</span> <span class="font-bold text-white">8€</span>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-lg bg-brand-surface border border-brand-border text-[11px] text-slate-400 font-sans">
+                Valid student or pensioner card required upon registration at the reception.
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 3. PERSONAL TRAINING -->
+          <div class="clean-card p-6 sm:p-8 rounded-2xl space-y-4">
+            <h3 class="font-heading font-extrabold text-xl text-lime-400 tracking-tight uppercase">
+              PERSONAL TRAINING
+            </h3>
+
+            <div class="space-y-2 font-mono text-xs sm:text-sm text-slate-200">
+              <div class="flex justify-between py-2 border-b border-brand-border/40">
+                <span>80€ / one program + one hour with the trainer</span>
+                <span class="font-bold text-white">80€</span>
+              </div>
+              <div class="flex justify-between py-2 border-b border-brand-border/40">
+                <span>225€ / one program + three hours with the trainer</span>
+                <span class="font-bold text-white">225€</span>
+              </div>
+              <div class="flex justify-between py-2 border-b border-brand-border/40">
+                <span>350€ / five hours with the trainer</span>
+                <span class="font-bold text-white">350€</span>
+              </div>
+              <div class="flex justify-between py-2">
+                <span>650€ / 10 hours with the trainer</span>
+                <span class="font-bold text-brand-orange">650€</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. GROUP FITNESS / FITNESS BOXING -->
+          <div class="clean-card p-6 sm:p-8 rounded-2xl space-y-3">
+            <h3 class="font-heading font-extrabold text-xl text-lime-400 tracking-tight uppercase">
+              GROUP FITNESS / FITNESS BOXING
+            </h3>
+
+            <p class="text-sm text-slate-300 leading-relaxed">
+              We have different kind of courses in our gym for senior citizens, for fitness boxing and workout classes. You can check the courses from our website: <a href="kuntonyrkkeily.html" class="text-brand-orange underline font-semibold hover:text-white transition">Ryhmäliikunta / Kuntonyrkkeily</a>.
+            </p>
+          </div>
+
+          <!-- 5. ASK US FOR MORE INFORMATION -->
+          <div class="clean-card p-6 sm:p-8 rounded-2xl space-y-4 border-l-4 border-l-brand-orange">
+            <h3 class="font-heading font-extrabold text-xl text-lime-400 tracking-tight uppercase">
+              ASK US FOR MORE INFORMATION
+            </h3>
+
+            <div class="space-y-2 font-mono text-sm sm:text-base">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-phone text-brand-orange"></i>
+                <a href="tel:0458855068" class="text-white hover:text-brand-orange font-bold transition">0458855068</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-envelope text-brand-orange"></i>
+                <a href="mailto:info@sporttikuja.fi" class="text-white hover:text-brand-orange transition">info@sporttikuja.fi</a>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-400 pt-2 border-t border-brand-border font-sans">
+              Address: Paasivaarankatu 3, 00810 Helsinki (3rd floor). Access with gym card 05:00–24:00 daily.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: SIDEBAR -->
+        <aside class="lg:col-span-4 space-y-6">
+          
+          <!-- SEARCH -->
+          <div class="clean-card p-5 rounded-xl space-y-2.5">
+            <label for="searchInputEng" class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Search</label>
+            <div class="relative">
+              <input type="text" id="searchInputEng" placeholder="Search" 
+                     class="w-full bg-black/60 border border-brand-border rounded-lg px-3.5 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange transition">
+              <button class="absolute right-3 top-2 text-slate-400 hover:text-brand-orange transition" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass text-xs"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- LATEST POSTS / VIIMEISIN JULKAISU -->
+          <div class="clean-card p-5 rounded-xl space-y-3">
+            <h3 class="font-heading font-bold text-sm text-white pb-2.5 border-b border-brand-border">
+              Viimeisin julkaisu
+            </h3>
+
+            <div class="space-y-2.5 text-xs">
+              <div class="border-b border-brand-border/40 pb-2">
+                <a href="ajankohtaista.html" class="text-slate-200 hover:text-brand-orange font-medium block transition">
+                  Kesä 2026 aukioloajat
+                </a>
+                <span class="text-[10px] font-mono text-slate-500">04/06/2026</span>
+              </div>
+
+              <div class="border-b border-brand-border/40 pb-2">
+                <a href="ajankohtaista.html" class="text-slate-200 hover:text-brand-orange font-medium block transition">
+                  Kesä 2025 aukioloajat
+                </a>
+                <span class="text-[10px] font-mono text-slate-500">02/06/2025</span>
+              </div>
+
+              <div class="border-b border-brand-border/40 pb-2">
+                <a href="ajankohtaista.html" class="text-slate-200 hover:text-brand-orange font-medium block transition">
+                  Porraskäytävänremontti
+                </a>
+                <span class="text-[10px] font-mono text-slate-500">25/10/2024</span>
+              </div>
+
+              <div class="border-b border-brand-border/40 pb-2">
+                <a href="ajankohtaista.html" class="text-slate-200 hover:text-brand-orange font-medium block transition">
+                  Miesten pukukaapit
+                </a>
+                <span class="text-[10px] font-mono text-slate-500">17/10/2024</span>
+              </div>
+
+              <div>
+                <a href="ajankohtaista.html" class="text-slate-200 hover:text-brand-orange font-medium block transition">
+                  Uudet suihku-ja saunatilat vihdoinkin valmis!
+                </a>
+                <span class="text-[10px] font-mono text-slate-500">02/10/2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARCHIVE / ARKISTO -->
+          <div class="clean-card p-5 rounded-xl space-y-3">
+            <h3 class="font-heading font-bold text-sm text-white pb-2 border-b border-brand-border">
+              Arkisto
+            </h3>
+
+            <div class="space-y-1.5 text-xs font-mono text-slate-300">
+              <a href="ajankohtaista.html" class="flex justify-between py-0.5 hover:text-brand-orange transition">
+                <span>kesäkuu 2026</span> <span class="text-slate-500">(1)</span>
+              </a>
+              <a href="ajankohtaista.html" class="flex justify-between py-0.5 hover:text-brand-orange transition">
+                <span>kesäkuu 2025</span> <span class="text-slate-500">(1)</span>
+              </a>
+              <a href="ajankohtaista.html" class="flex justify-between py-0.5 hover:text-brand-orange transition">
+                <span>lokakuu 2024</span> <span class="text-slate-500">(3)</span>
+              </a>
+              <a href="ajankohtaista.html" class="flex justify-between py-0.5 hover:text-brand-orange transition">
+                <span>syyskuu 2024</span> <span class="text-slate-500">(2)</span>
+              </a>
+              <a href="ajankohtaista.html" class="flex justify-between py-0.5 hover:text-brand-orange transition">
+                <span>elokuu 2024</span> <span class="text-slate-500">(1)</span>
+              </a>
+              <a href="ajankohtaista.html" class="flex justify-between py-0.5 hover:text-brand-orange transition">
+                <span>huhtikuu 2024</span> <span class="text-slate-500">(1)</span>
+              </a>
+              <a href="ajankohtaista.html" class="flex justify-between py-0.5 hover:text-brand-orange transition">
+                <span>maaliskuu 2024</span> <span class="text-slate-500">(1)</span>
+              </a>
+              <a href="ajankohtaista.html" class="flex justify-between py-0.5 hover:text-brand-orange transition">
+                <span>elokuu 2023</span> <span class="text-slate-500">(1)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- QUICK CARD PASS BANNER -->
+          <div class="p-6 rounded-2xl bg-brand-orangeSoft/60 border border-brand-orange/40 text-xs space-y-3 font-sans">
+            <span class="text-brand-orange font-bold font-mono uppercase block">Workout 365 Days</span>
+            <p class="text-slate-300 leading-relaxed">
+              With a valid gym card you can work out every day from 05:00 to 24:00, including holidays.
+            </p>
+            <a href="yhteystiedot.html" class="inline-flex items-center gap-1.5 text-white hover:text-brand-orange font-bold transition">
+              <span>View location & directions</span> →
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#050608] py-12 text-xs text-slate-500 border-t border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-brand-border">
+        <div class="font-heading font-black text-white text-base tracking-tight">
+          SPORTTI<span class="text-brand-orange">KUJA</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#" class="hover:text-white transition">Tietosuojaseloste</a>
+          <a href="#" class="hover:text-white transition">Verkkokaupan toimitusehdot</a>
+          <a href="#" class="hover:text-white transition">Oiva-raportit</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
+        <div>Kotisivut yritykselle toteutti Geeky Panda.</div>
+        <div>© <span id="yearSpanEng"></span> Sporttikuja. Kaikki oikeudet pidätetään.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yearSpanEng').textContent = new Date().getFullYear();
+
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobLinks = document.querySelectorAll('.mob-link');
+
+    if (mobileBtn && mobileDrawer) {
+      mobileBtn.addEventListener('click', () => { mobileDrawer.classList.toggle('hidden'); });
+      mobLinks.forEach(link => { link.addEventListener('click', () => mobileDrawer.classList.add('hidden')); });
+    }
+  </script>
+</body>
+</html>
