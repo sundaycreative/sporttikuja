@@ -47,15 +47,6 @@
     ::-webkit-scrollbar-thumb { background: #252b3d; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #ff5500; }
 
-    .word-reveal {
-      display: inline-block;
-      transition: color 0.25s ease, opacity 0.25s ease;
-      opacity: 0.25;
-      color: #64748b;
-    }
-    .word-reveal.active { opacity: 1; color: #ffffff; }
-    .word-reveal.active-orange { opacity: 1; color: #ff5500; }
-
     .clean-card {
       background-color: #11141c;
       border: 1px solid #1c2230;
@@ -97,9 +88,19 @@
     </div>
   </div>
 
-  <!-- НАВИГАЦИЯ (Yhteistyö ПОЛНОСТЬЮ УБРАН) -->
+  <!-- НАВИГАЦИЯ: МЕНЮ СЛЕВА, КОРЗИНА СПРАВА НА МОБИЛЬНЫХ -->
   <nav class="sticky top-0 z-50 bg-[#090b10]/95 backdrop-blur-md border-b border-brand-border">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+      
+      <!-- Мобильная кнопка МЕНЮ СЛЕВА (3 полосочки + надпись Valikko) -->
+      <div class="flex items-center xl:hidden">
+        <button id="mobileMenuBtn" class="flex items-center gap-2 px-3 py-1.5 rounded bg-brand-surface border border-brand-border text-slate-200 hover:text-brand-orange hover:border-brand-orange transition text-xs font-semibold" aria-label="Valikko">
+          <i class="fa-solid fa-bars text-sm text-brand-orange"></i>
+          <span>Valikko</span>
+        </button>
+      </div>
+
+      <!-- Десктопное меню -->
       <div class="hidden xl:flex items-center gap-5 text-[13px] font-medium text-slate-300">
         <a href="index.html" class="text-brand-orange font-semibold">Etusivu</a>
         <a href="kuntosali.html" class="hover:text-brand-orange transition-colors">Kuntosali</a>
@@ -112,6 +113,7 @@
         <a href="in-english.html" class="text-slate-500 hover:text-white transition-colors">In English</a>
       </div>
 
+      <!-- Правая часть: соцсети на десктопе + КОРЗИНА СПРАВА (и на мобилках, и на десктопе) -->
       <div class="flex items-center gap-4">
         <div class="hidden sm:flex items-center gap-3 text-slate-400 text-sm border-r border-brand-border pr-4">
           <a href="https://facebook.com" target="_blank" rel="noreferrer" class="hover:text-brand-orange transition"><i class="fa-brands fa-facebook-f"></i></a>
@@ -122,14 +124,10 @@
           <span>Verkkokauppa</span>
           <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-brand-orange group-hover:bg-black text-[11px] font-mono font-bold text-white">0</span>
         </a>
-
-        <button id="mobileMenuBtn" class="xl:hidden p-2 text-slate-400 hover:text-white" aria-label="Valikko">
-          <i class="fa-solid fa-bars text-lg"></i>
-        </button>
       </div>
     </div>
 
-    <!-- Мобильное меню -->
+    <!-- Мобильное выпадающее меню -->
     <div id="mobileDrawer" class="hidden xl:hidden bg-brand-surface border-b border-brand-border px-5 py-4 space-y-2.5 text-sm font-medium">
       <a href="index.html" class="block py-1 text-brand-orange font-semibold mob-link">Etusivu</a>
       <a href="kuntosali.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntosali</a>
@@ -195,10 +193,10 @@
     </div>
   </section>
 
-  <!-- РАЗДЕЛ 1: TERVETULOA TREENAAMAAN SPORTTIKUJALLE (ТОЧНО СО СКРИНШОТА 1) -->
+  <!-- РАЗДЕЛ 1: TERVETULOA TREENAAMAAN SPORTTIKUJALLE -->
   <section class="py-16 sm:py-24 border-b border-brand-border bg-[#0b0d13]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
-      <h2 class="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-lime-400 tracking-tight uppercase">
+      <h2 class="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-white tracking-tight uppercase">
         TERVETULOA TREENAAMAAN SPORTTIKUJALLE
       </h2>
 
@@ -219,18 +217,17 @@
     </div>
   </section>
 
-  <!-- РАЗДЕЛ 2: TARJOUKSET (ТОЧНО СО СКРИНШОТА 1 И 2) -->
+  <!-- РАЗДЕЛ 2: TARJOUKSET -->
   <section class="py-16 sm:py-20 border-b border-brand-border bg-brand-black">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <!-- Фото тренажеров зала -->
         <div class="lg:col-span-6 relative rounded-2xl overflow-hidden border border-brand-border shadow-xl group">
           <img src="hero-2.jpg" alt="Sporttikuja laitteet" class="w-full h-80 sm:h-96 object-cover object-center transition-transform duration-500 group-hover:scale-105">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
         </div>
 
         <div class="lg:col-span-6 space-y-6">
-          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-lime-400 tracking-tight uppercase">
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight uppercase">
             TARJOUKSET
           </h2>
           
@@ -249,13 +246,13 @@
     </div>
   </section>
 
-  <!-- РАЗДЕЛ 3: KUNTOSALI + ОТЗЫВЫ (ТОЧНО СО СКРИНШОТА 2) -->
+  <!-- РАЗДЕЛ 3: KUNTOSALI + ОТЗЫВЫ -->
   <section class="py-16 sm:py-20 border-b border-brand-border bg-[#0b0d13]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
         <div class="lg:col-span-6 space-y-5">
-          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-lime-400 tracking-tight uppercase">
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight uppercase">
             KUNTOSALI
           </h2>
           
@@ -292,14 +289,14 @@
     </div>
   </section>
 
-  <!-- РАЗДЕЛ 4: KUNTONYRKKEILY & RYHMÄLIIKUNTA (ТОЧНО СО СКРИНШОТА 3) -->
+  <!-- РАЗДЕЛ 4: KUNTONYRKKEILY & RYHMÄLIIKUNTA -->
   <section class="py-16 sm:py-20 border-b border-brand-border bg-brand-black">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
         <div class="lg:col-span-6 space-y-6">
           <div class="space-y-3">
-            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-lime-400 tracking-tight uppercase">
+            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight uppercase">
               KUNTONYRKKEILY
             </h2>
             <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -312,7 +309,7 @@
           </div>
 
           <div class="pt-4 border-t border-brand-border space-y-2">
-            <h3 class="font-heading font-bold text-base sm:text-lg text-lime-400 uppercase tracking-tight">
+            <h3 class="font-heading font-bold text-base sm:text-lg text-white uppercase tracking-tight">
               SPORTTIKUJALLA MYÖS RYHMÄLIIKUNTAA!
             </h3>
             <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -321,7 +318,6 @@
           </div>
         </div>
 
-        <!-- Фото группы с флагом Финляндии -->
         <div class="lg:col-span-6 relative rounded-2xl overflow-hidden border border-brand-border shadow-xl group">
           <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1200&auto=format&fit=crop" 
                alt="Sporttikuja nyrkkeily ja ryhmäliikunta" 
@@ -333,11 +329,11 @@
     </div>
   </section>
 
-  <!-- РАЗДЕЛ 5: PALVELUT С 6 КРУГЛЫМИ ИКОНКАМИ (ТОЧНО СО СКРИНШОТА 4) -->
+  <!-- РАЗДЕЛ 5: PALVELUT С 6 КРУГЛЫМИ ИКОНКАМИ -->
   <section class="py-16 sm:py-20 border-b border-brand-border bg-[#0b0d13]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-12">
-        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-lime-400 tracking-tight uppercase">
+        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight uppercase">
           PALVELUT
         </h2>
       </div>
@@ -346,68 +342,68 @@
         <!-- 1. Kuntosali -->
         <div class="space-y-3 flex flex-col items-center">
           <div class="w-16 h-16 rounded-full bg-slate-900 border border-brand-border flex items-center justify-center text-white text-xl">
-            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-flag text-brand-orange"></i>
           </div>
-          <h3 class="font-heading font-bold text-xs sm:text-sm text-lime-400">Kuntosali</h3>
+          <h3 class="font-heading font-bold text-xs sm:text-sm text-white">Kuntosali</h3>
           <a href="kuntosali.html" class="text-[11px] font-mono text-slate-300 hover:text-brand-orange transition inline-flex items-center gap-1">
-            <span>More Info</span> <i class="fa-solid fa-play text-[8px]"></i>
+            <span>More Info</span> <i class="fa-solid fa-play text-[8px] text-brand-orange"></i>
           </a>
         </div>
 
         <!-- 2. Nyrkkeilysali -->
         <div class="space-y-3 flex flex-col items-center">
           <div class="w-16 h-16 rounded-full bg-slate-900 border border-brand-border flex items-center justify-center text-white text-xl">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user text-brand-orange"></i>
           </div>
-          <h3 class="font-heading font-bold text-xs sm:text-sm text-lime-400">Nyrkkeilysali</h3>
+          <h3 class="font-heading font-bold text-xs sm:text-sm text-white">Nyrkkeilysali</h3>
           <a href="kuntonyrkkeily.html" class="text-[11px] font-mono text-slate-300 hover:text-brand-orange transition inline-flex items-center gap-1">
-            <span>More Info</span> <i class="fa-solid fa-play text-[8px]"></i>
+            <span>More Info</span> <i class="fa-solid fa-play text-[8px] text-brand-orange"></i>
           </a>
         </div>
 
         <!-- 3. Siistit pukuhuoneet -->
         <div class="space-y-3 flex flex-col items-center">
           <div class="w-16 h-16 rounded-full bg-slate-900 border border-brand-border flex items-center justify-center text-white text-xl">
-            <i class="fa-solid fa-check"></i>
+            <i class="fa-solid fa-check text-brand-orange"></i>
           </div>
-          <h3 class="font-heading font-bold text-xs sm:text-sm text-lime-400">Siistit pukuhuoneet</h3>
+          <h3 class="font-heading font-bold text-xs sm:text-sm text-white">Siistit pukuhuoneet</h3>
         </div>
 
         <!-- 4. Suihkutilat ja saunat -->
         <div class="space-y-3 flex flex-col items-center">
           <div class="w-16 h-16 rounded-full bg-slate-900 border border-brand-border flex items-center justify-center text-white text-xl">
-            <i class="fa-solid fa-bath"></i>
+            <i class="fa-solid fa-bath text-brand-orange"></i>
           </div>
-          <h3 class="font-heading font-bold text-xs sm:text-sm text-lime-400">Suihkutilat ja saunat</h3>
+          <h3 class="font-heading font-bold text-xs sm:text-sm text-white">Suihkutilat ja saunat</h3>
         </div>
 
         <!-- 5. Kahvila ja urheilukauppa -->
         <div class="space-y-3 flex flex-col items-center">
           <div class="w-16 h-16 rounded-full bg-slate-900 border border-brand-border flex items-center justify-center text-white text-xl">
-            <i class="fa-solid fa-coffee"></i>
+            <i class="fa-solid fa-coffee text-brand-orange"></i>
           </div>
-          <h3 class="font-heading font-bold text-xs sm:text-sm text-lime-400">Kahvila ja urheilukauppa</h3>
+          <h3 class="font-heading font-bold text-xs sm:text-sm text-white">Kahvila ja urheilukauppa</h3>
         </div>
 
         <!-- 6. Personal training-palvelut -->
         <div class="space-y-3 flex flex-col items-center">
           <div class="w-16 h-16 rounded-full bg-slate-900 border border-brand-border flex items-center justify-center text-white text-xl">
-            <i class="fa-solid fa-person"></i>
+            <i class="fa-solid fa-person text-brand-orange"></i>
           </div>
-          <h3 class="font-heading font-bold text-xs sm:text-sm text-lime-400 leading-tight">Personal training-palvelut</h3>
+          <h3 class="font-heading font-bold text-xs sm:text-sm text-white leading-tight">Personal training-palvelut</h3>
           <a href="valmennus.html" class="text-[11px] font-mono text-slate-300 hover:text-brand-orange transition inline-flex items-center gap-1">
-            <span>More Info</span> <i class="fa-solid fa-play text-[8px]"></i>
+            <span>More Info</span> <i class="fa-solid fa-play text-[8px] text-brand-orange"></i>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- РАЗДЕЛ 6: AJANKOHTAISTA ПЛАШКИ НОВОСТЕЙ (ТОЧНО СО СКРИНШОТА 4) -->
+  <!-- РАЗДЕЛ 6: AJANKOHTAISTA ПЛАШКИ НОВОСТЕЙ -->
   <section class="py-16 sm:py-20 border-b border-brand-border bg-brand-black">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between mb-8">
-        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-lime-400 tracking-tight uppercase">
+        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight uppercase">
           AJANKOHTAISTA
         </h2>
         <a href="ajankohtaista.html" class="text-xs font-mono text-brand-orange hover:text-white transition">
@@ -469,18 +465,17 @@
     </div>
   </section>
 
-  <!-- РАЗДЕЛ 7: INFO / MAKSUTAVAT & ЧАСЫ ПИК (ТОЧНО СО СКРИНШОТА 5) -->
+  <!-- РАЗДЕЛ 7: INFO / MAKSUTAVAT & ЧАСЫ ПИК -->
   <section class="py-16 sm:py-20 border-b border-brand-border bg-[#0b0d13]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-12">
-        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-lime-400 tracking-tight uppercase">
+        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight uppercase">
           INFO
         </h2>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         
-        <!-- Текст слева со скриншота 5 -->
         <div class="lg:col-span-7 space-y-6">
           <div>
             <h3 class="font-heading font-bold text-sm sm:text-base text-white uppercase mb-2">MAKSUTAVAT</h3>
@@ -509,7 +504,6 @@
           </div>
         </div>
 
-        <!-- Фото справа со скриншота 5 -->
         <div class="lg:col-span-5 relative rounded-2xl overflow-hidden border border-brand-border shadow-xl">
           <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" 
                alt="Sporttikuja kuntosali" 
