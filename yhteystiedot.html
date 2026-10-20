@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fi" class="scroll-smooth bg-[#08080a] text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yhteystiedot — Sporttikuja Herttoniemi</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#08080a',
+              surface: '#0f1117',
+              card: '#141720',
+              cardHover: '#191d29',
+              border: '#1f2433',
+              borderLight: '#2b3246',
+              orange: '#ff5500',
+              orangeHover: '#e64d00',
+              orangeSoft: 'rgba(255, 85, 0, 0.12)',
+              textPrimary: '#ffffff',
+              textSecondary: '#94a3b8',
+              textMuted: '#64748b'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #08080a; }
+    ::-webkit-scrollbar-thumb { background: #252b3d; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #ff5500; }
+
+    .clean-card {
+      background-color: #11141c;
+      border: 1px solid #1c2230;
+      transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    }
+    .clean-card:hover {
+      border-color: #ff5500;
+      background-color: #151924;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-black text-slate-100 font-sans antialiased selection:bg-brand-orange selection:text-white flex flex-col min-h-screen">
+
+  <!-- ВЕРХНЯЯ СТРОКА: ЛОГОТИП + СЛОГАН -->
+  <div class="border-b border-brand-border bg-[#0b0d13]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="relative flex flex-col items-center justify-center px-4 py-1.5 rounded bg-brand-surface border border-brand-border group-hover:border-brand-orange transition">
+          <div class="flex items-center gap-1.5 text-[9px] font-mono tracking-widest text-brand-orange font-bold uppercase">
+            <span>★</span><span>Helsinki</span><span>★</span>
+          </div>
+          <span class="font-heading font-black text-2xl tracking-tighter text-white uppercase leading-none mt-0.5">
+            SPORTTI<span class="text-brand-orange">KUJA</span>
+          </span>
+          <div class="text-[9px] font-mono tracking-widest text-slate-400 font-semibold uppercase mt-0.5">
+            19 • ESTB • 85
+          </div>
+        </div>
+      </a>
+
+      <div class="text-center md:text-right">
+        <p class="font-heading italic text-xs sm:text-sm text-slate-300 tracking-wide">
+          ”Pidä huolta temppelistäsi, niin temppeli pitää huolta sinusta”.
+        </p>
+        <span class="text-[11px] font-mono text-brand-orange block mt-0.5">Herttoniemenranta • Helsinki</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- НАВИГАЦИЯ (Yhteystiedot активен) -->
+  <nav class="sticky top-0 z-50 bg-[#090b10]/95 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+      <div class="hidden xl:flex items-center gap-5 text-[13px] font-medium text-slate-300">
+        <a href="index.html" class="hover:text-brand-orange transition-colors">Etusivu</a>
+        <a href="kuntosali.html" class="hover:text-brand-orange transition-colors">Kuntosali</a>
+        <a href="valmennus.html" class="hover:text-brand-orange transition-colors">Valmennus</a>
+        <a href="kuntonyrkkeily.html" class="hover:text-brand-orange transition-colors">Kuntonyrkkeily</a>
+        <a href="kuntoutus.html" class="hover:text-brand-orange transition-colors">Kuntoutus</a>
+        <a href="hinnasto.html" class="hover:text-brand-orange transition-colors">Hinnasto</a>
+        <a href="ajankohtaista.html" class="hover:text-brand-orange transition-colors">Ajankohtaista</a>
+        <a href="yhteystiedot.html" class="text-brand-orange font-semibold">Yhteystiedot</a>
+        <a href="yhteistyo.html" class="hover:text-brand-orange transition-colors">Yhteistyö</a>
+        <a href="in-english.html" class="text-slate-500 hover:text-white transition-colors">In English</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div class="hidden sm:flex items-center gap-3 text-slate-400 text-sm border-r border-brand-border pr-4">
+          <a href="https://facebook.com" target="_blank" rel="noreferrer" class="hover:text-brand-orange transition"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" class="hover:text-brand-orange transition"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <a href="hinnasto.html" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-brand-surface hover:bg-brand-orange text-white text-xs font-semibold border border-brand-border transition-colors group">
+          <span>Verkkokauppa</span>
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-brand-orange group-hover:bg-black text-[11px] font-mono font-bold text-white">0</span>
+        </a>
+
+        <button id="mobileMenuBtn" class="xl:hidden p-2 text-slate-400 hover:text-white" aria-label="Valikko">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div id="mobileDrawer" class="hidden xl:hidden bg-brand-surface border-b border-brand-border px-5 py-4 space-y-2.5 text-sm font-medium">
+      <a href="index.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Etusivu</a>
+      <a href="kuntosali.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntosali</a>
+      <a href="valmennus.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Valmennus</a>
+      <a href="kuntonyrkkeily.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntonyrkkeily</a>
+      <a href="kuntoutus.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntoutus</a>
+      <a href="hinnasto.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Hinnasto</a>
+      <a href="ajankohtaista.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Ajankohtaista</a>
+      <a href="yhteystiedot.html" class="block py-1 text-brand-orange font-semibold mob-link">Yhteystiedot</a>
+      <a href="yhteistyo.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Yhteistyö</a>
+      <a href="in-english.html" class="block py-1 text-slate-400 mob-link">In English</a>
+    </div>
+  </nav>
+
+  <!-- СТРАНИЦА YHTEYSTIEDOT -->
+  <main class="flex-grow py-12 sm:py-20 bg-brand-black border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <!-- Кнопка возврата -->
+      <div class="mb-6">
+        <a href="index.html" class="inline-flex items-center gap-2 text-xs font-mono text-brand-orange hover:text-white transition">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Palaa etusivulle</span>
+        </a>
+      </div>
+
+      <!-- Заголовок страницы -->
+      <div class="mb-10 text-center sm:text-left">
+        <span class="font-mono text-xs text-brand-orange font-semibold uppercase tracking-wider block mb-2">// Osa 08</span>
+        <h1 class="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
+          YHTEYSTIEDOT
+        </h1>
+        <p class="text-sm text-slate-400 mt-2">Saapumisohjeet, aukioloajat ja karttasijainti.</p>
+      </div>
+
+      <!-- ВЕРХНИЙ БЛОК: КОНТАКТЫ + ЧАСЫ РАБОТЫ + ИНТЕРАКТИВНАЯ КАРТА (СКРИНШОТ 1) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-14">
+        
+        <!-- Левая колонка: контактная информация и график -->
+        <div class="lg:col-span-6 clean-card p-6 sm:p-8 rounded-2xl space-y-6">
+          <div>
+            <h2 class="font-heading font-extrabold text-2xl text-white mb-2">Sporttikuja</h2>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Paasivaarankatu 3<br>
+              00810, Helsinki
+            </p>
+          </div>
+
+          <div class="space-y-2 pt-2 border-t border-brand-border font-mono text-sm">
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-brand-orange"></i>
+              <a href="tel:0458855068" class="text-white hover:text-brand-orange font-bold transition">045 8855 068</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-brand-orange"></i>
+              <a href="mailto:info@sporttikuja.fi" class="text-white hover:text-brand-orange transition">info@sporttikuja.fi</a>
+            </div>
+          </div>
+
+          <!-- Часы работы стойки обслуживания -->
+          <div class="space-y-3 pt-4 border-t border-brand-border">
+            <h3 class="font-heading font-bold text-sm text-white">Vastaanoton aukioloajat:</h3>
+            <div class="space-y-1.5 font-mono text-xs text-slate-300">
+              <div class="flex justify-between py-1 border-b border-brand-border/40">
+                <span class="text-slate-400">Ma 12-20, Ti 12-19, Ke 12-19, To 12-19, Pe 12-17</span>
+              </div>
+              <div class="flex justify-between py-1 text-slate-400">
+                <span>La</span> <span>ei asiakaspalvelua</span>
+              </div>
+              <div class="flex justify-between py-1 text-slate-400">
+                <span>Su</span> <span>ei asiakaspalvelua</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Примечание о ключ-карте -->
+          <div class="p-4 rounded-xl bg-brand-orangeSoft/60 border border-brand-orange/40 text-xs text-brand-orange font-semibold">
+            Voimassa olevalla kulkukortilla pääset treenaamaan joka päivä klo 5-24.
+          </div>
+        </div>
+
+        <!-- Правая колонка: интерактивная карта Google Maps -->
+        <div class="lg:col-span-6 clean-card rounded-2xl overflow-hidden p-2">
+          <div class="relative w-full h-[380px] sm:h-[420px] rounded-xl overflow-hidden">
+            <iframe 
+              title="Sporttikuja sijainti kartalla"
+              src="https://maps.google.com/maps?q=Paasivaarankatu%203,%2000810%20Helsinki&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              class="w-full h-full border-0"
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            
+            <a href="https://maps.google.com/?q=Paasivaarankatu+3+Helsinki" target="_blank" rel="noopener noreferrer" 
+               class="absolute bottom-3 right-3 px-3.5 py-1.5 rounded-lg bg-black/85 hover:bg-brand-orange text-white text-xs font-mono font-semibold border border-brand-border transition shadow-lg flex items-center gap-1.5">
+              <span>Avaa Mapsissa</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- СРЕДНИЙ БЛОК: ФОТОГРАФИЯ ЗДАНИЯ (СКРИНШОТ 2) -->
+      <div class="mb-14">
+        <div class="relative rounded-2xl overflow-hidden border border-brand-border shadow-2xl group">
+          <img src="yhteystiedot-rakennus.jpg" 
+               alt="Sporttikuja rakennus ja sisäänkäynti" 
+               class="w-full h-72 sm:h-[420px] object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4 p-3 rounded-lg bg-black/75 backdrop-blur border border-white/10 text-xs font-mono text-slate-300">
+            <span class="text-brand-orange font-bold">Paasivaarankatu 3</span> • Liikuntakeskus Sporttikuja 3. kerros
+          </div>
+        </div>
+      </div>
+
+      <!-- НИЖНИЙ БЛОК СО СКРИНШОТА 2: ТРАНСПОРТ И ТОЧНОЕ РАСПОЛОЖЕНИЕ -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Общественный транспорт -->
+        <div class="clean-card p-6 sm:p-8 rounded-2xl space-y-4">
+          <div class="flex items-center gap-2 text-brand-orange font-mono text-xs font-bold uppercase">
+            <i class="fa-solid fa-bus"></i>
+            <span>Saapuminen</span>
+          </div>
+
+          <h3 class="font-heading font-extrabold text-xl text-white">Julkisilla Sporttikujalle</h3>
+
+          <div class="space-y-4 text-xs sm:text-sm text-slate-300">
+            <div>
+              <strong class="text-white block font-heading mb-0.5">Metro</strong>
+              <p>Herttoniemen metroasemalta on n. 1 km matkaa.</p>
+            </div>
+
+            <div>
+              <strong class="text-white block font-heading mb-0.5">Bussit</strong>
+              <p class="mb-1"><span class="text-slate-400">Herttoniemen metroasemalle (1 km):</span> 79, 80, 82, 83, 85, 86, 88, 89</p>
+              <p class="mb-1"><span class="text-slate-400">Herttoniemenrantaan (0,1 km):</span> 81, 81 B</p>
+              <p><span class="text-slate-400">Kipparlahteen (0.5 km):</span> 500, 510</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Точное расположение и парковка -->
+        <div class="clean-card p-6 sm:p-8 rounded-2xl space-y-4">
+          <div class="flex items-center gap-2 text-brand-orange font-mono text-xs font-bold uppercase">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Opasteet</span>
+          </div>
+
+          <h3 class="font-heading font-extrabold text-xl text-white">Tarkempi sijainti</h3>
+
+          <div class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p>
+              Sporttikuja sijaitsee remontoidun teollisuusrakennuksen kolmannessa kerroksessa. Sisäänkäynti on ensimmäisessä kerroksessa tenniskenttiä/jääkiekkokaukaloa vastapäätä.
+            </p>
+            <p class="pt-2 border-t border-brand-border">
+              Parkkipaikkoja on Paasivaarankadulla. Samassa rakennuksessa on myös parkkihalli paikan ostaneille.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="bg-[#050608] py-12 text-xs text-slate-500 border-t border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-brand-border">
+        <div class="font-heading font-black text-white text-base tracking-tight">
+          SPORTTI<span class="text-brand-orange">KUJA</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#" class="hover:text-white transition">Tietosuojaseloste</a>
+          <a href="#" class="hover:text-white transition">Verkkokaupan toimitusehdot</a>
+          <a href="#" class="hover:text-white transition">Oiva-raportit</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
+        <div>Kotisivut yritykselle toteutti Geeky Panda.</div>
+        <div>© <span id="yearSpanYht"></span> Sporttikuja. Kaikki oikeudet pidätetään.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yearSpanYht').textContent = new Date().getFullYear();
+
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobLinks = document.querySelectorAll('.mob-link');
+
+    if (mobileBtn && mobileDrawer) {
+      mobileBtn.addEventListener('click', () => { mobileDrawer.classList.toggle('hidden'); });
+      mobLinks.forEach(link => { link.addEventListener('click', () => mobileDrawer.classList.add('hidden')); });
+    }
+  </script>
+</body>
+</html>
