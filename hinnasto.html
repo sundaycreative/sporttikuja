@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fi" class="scroll-smooth bg-[#08080a] text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hinnasto — Sporttikuja Herttoniemi</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#08080a',
+              surface: '#0f1117',
+              card: '#141720',
+              cardHover: '#191d29',
+              border: '#1f2433',
+              borderLight: '#2b3246',
+              orange: '#ff5500',
+              orangeHover: '#e64d00',
+              orangeSoft: 'rgba(255, 85, 0, 0.12)',
+              textPrimary: '#ffffff',
+              textSecondary: '#94a3b8',
+              textMuted: '#64748b'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #08080a; }
+    ::-webkit-scrollbar-thumb { background: #252b3d; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #ff5500; }
+
+    .clean-card {
+      background-color: #11141c;
+      border: 1px solid #1c2230;
+      transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    }
+    .clean-card:hover {
+      border-color: #ff5500;
+      background-color: #151924;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-black text-slate-100 font-sans antialiased selection:bg-brand-orange selection:text-white flex flex-col min-h-screen">
+
+  <!-- ВЕРХНЯЯ СТРОКА: ЛОГОТИП + СЛОГАН -->
+  <div class="border-b border-brand-border bg-[#0b0d13]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="relative flex flex-col items-center justify-center px-4 py-1.5 rounded bg-brand-surface border border-brand-border group-hover:border-brand-orange transition">
+          <div class="flex items-center gap-1.5 text-[9px] font-mono tracking-widest text-brand-orange font-bold uppercase">
+            <span>★</span><span>Helsinki</span><span>★</span>
+          </div>
+          <span class="font-heading font-black text-2xl tracking-tighter text-white uppercase leading-none mt-0.5">
+            SPORTTI<span class="text-brand-orange">KUJA</span>
+          </span>
+          <div class="text-[9px] font-mono tracking-widest text-slate-400 font-semibold uppercase mt-0.5">
+            19 • ESTB • 85
+          </div>
+        </div>
+      </a>
+
+      <div class="text-center md:text-right">
+        <p class="font-heading italic text-xs sm:text-sm text-slate-300 tracking-wide">
+          ”Pidä huolta temppelistäsi, niin temppeli pitää huolta sinusta”.
+        </p>
+        <span class="text-[11px] font-mono text-brand-orange block mt-0.5">Herttoniemenranta • Helsinki</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- НАВИГАЦИЯ (Hinnasto активен) -->
+  <nav class="sticky top-0 z-50 bg-[#090b10]/95 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+      <div class="hidden xl:flex items-center gap-5 text-[13px] font-medium text-slate-300">
+        <a href="index.html" class="hover:text-brand-orange transition-colors">Etusivu</a>
+        <a href="kuntosali.html" class="hover:text-brand-orange transition-colors">Kuntosali</a>
+        <a href="valmennus.html" class="hover:text-brand-orange transition-colors">Valmennus</a>
+        <a href="kuntonyrkkeily.html" class="hover:text-brand-orange transition-colors">Kuntonyrkkeily</a>
+        <a href="kuntoutus.html" class="hover:text-brand-orange transition-colors">Kuntoutus</a>
+        <a href="hinnasto.html" class="text-brand-orange font-semibold">Hinnasto</a>
+        <a href="ajankohtaista.html" class="hover:text-brand-orange transition-colors">Ajankohtaista</a>
+        <a href="yhteystiedot.html" class="hover:text-brand-orange transition-colors">Yhteystiedot</a>
+        <a href="yhteistyo.html" class="hover:text-brand-orange transition-colors">Yhteistyö</a>
+        <a href="in-english.html" class="text-slate-500 hover:text-white transition-colors">In English</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div class="hidden sm:flex items-center gap-3 text-slate-400 text-sm border-r border-brand-border pr-4">
+          <a href="https://facebook.com" target="_blank" rel="noreferrer" class="hover:text-brand-orange transition"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" class="hover:text-brand-orange transition"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <a href="hinnasto.html" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-brand-orange text-white text-xs font-semibold border border-brand-orange/20 transition-colors group">
+          <span>Verkkokauppa</span>
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-black text-[11px] font-mono font-bold text-white">0</span>
+        </a>
+
+        <button id="mobileMenuBtn" class="xl:hidden p-2 text-slate-400 hover:text-white" aria-label="Valikko">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div id="mobileDrawer" class="hidden xl:hidden bg-brand-surface border-b border-brand-border px-5 py-4 space-y-2.5 text-sm font-medium">
+      <a href="index.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Etusivu</a>
+      <a href="kuntosali.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntosali</a>
+      <a href="valmennus.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Valmennus</a>
+      <a href="kuntonyrkkeily.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntonyrkkeily</a>
+      <a href="kuntoutus.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntoutus</a>
+      <a href="hinnasto.html" class="block py-1 text-brand-orange font-semibold mob-link">Hinnasto</a>
+      <a href="ajankohtaista.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Ajankohtaista</a>
+      <a href="yhteystiedot.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Yhteystiedot</a>
+      <a href="yhteistyo.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Yhteistyö</a>
+      <a href="in-english.html" class="block py-1 text-slate-400 mob-link">In English</a>
+    </div>
+  </nav>
+
+  <!-- СТРАНИЦА HINNASTO -->
+  <main class="flex-grow py-16 sm:py-24 bg-brand-black border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="mb-6">
+        <a href="index.html" class="inline-flex items-center gap-2 text-xs font-mono text-brand-orange hover:text-white transition">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Palaa etusivulle</span>
+        </a>
+      </div>
+
+      <!-- Заголовок страницы -->
+      <div class="mb-12">
+        <span class="font-mono text-xs text-brand-orange font-semibold uppercase tracking-wider block mb-2">// Osa 06</span>
+        <h1 class="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
+          HINNASTO
+        </h1>
+        <p class="text-sm text-slate-400 mt-2">Selkeät ja reilut hinnat ilman sitoutumispakkoa tai piilokuluja.</p>
+      </div>
+
+      <!-- БЛОК 1 СО СКРИНШОТА 1: ДВЕ ТАБЛИЦЫ ЦЕН (KUNTOSALI И OPISKELIJA/ELÄKELÄISHINNAT) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        
+        <!-- Колонка 1: Kuntosali -->
+        <div class="clean-card p-6 sm:p-8 rounded-2xl space-y-6">
+          <div class="flex items-center justify-between pb-3 border-b border-brand-border">
+            <h2 class="font-heading font-extrabold text-xl sm:text-2xl text-white">Kuntosali</h2>
+            <span class="text-xs font-mono text-brand-orange font-semibold uppercase">Normaalihinnat</span>
+          </div>
+
+          <div class="space-y-3 font-mono text-sm">
+            <div class="flex justify-between items-center py-2 border-b border-brand-border/60">
+              <span class="text-slate-300">Kertamaksu <span class="text-xs text-slate-400 block font-sans">(vain asiakaspalvelun ollessa auki)</span></span>
+              <span class="font-bold text-white text-base">10€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-brand-border/60">
+              <span class="text-slate-300">*10x kortti</span>
+              <span class="font-bold text-brand-orange text-base">70€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-brand-border/60">
+              <span class="text-slate-300">1 kk</span>
+              <span class="font-bold text-white text-base">45 €</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-brand-border/60">
+              <span class="text-slate-300">3 kk</span>
+              <span class="font-bold text-white text-base">120 €</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-brand-border/60">
+              <span class="text-slate-300">6 kk</span>
+              <span class="font-bold text-white text-base">220 €</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-brand-border/60">
+              <span class="text-slate-300">12 kk</span>
+              <span class="font-bold text-brand-orange text-base">430 €</span>
+            </div>
+          </div>
+
+          <!-- Примечание о разовом платеже -->
+          <div class="p-4 rounded-xl bg-black/60 border border-brand-border text-xs text-slate-300 leading-relaxed">
+            <strong class="text-brand-orange block mb-1">HUOM!</strong>
+            Kertamaksu ainoastaan pankkikortilla tai liikuntaedulla, ja henkilöllisyystodistus esitettävä henkilökunnalle.
+          </div>
+        </div>
+
+        <!-- Колонка 2: Opiskelija/eläkeläishinnat -->
+        <div class="clean-card p-6 sm:p-8 rounded-2xl space-y-6">
+          <div class="flex items-center justify-between pb-3 border-b border-brand-border">
+            <h2 class="font-heading font-extrabold text-xl sm:text-2xl text-white">Opiskelija/eläkeläishinnat</h2>
+            <span class="text-xs font-mono text-emerald-400 font-semibold uppercase">Alennushinnat</span>
+          </div>
+
+          <div class="space-y-3 font-mono text-sm">
+            <div class="flex justify-between items-center py-2 border-b border-brand-border/60">
+              <span class="text-slate-300">Kertamaksu <span class="text-xs text-slate-400 block font-sans">(vain asiakaspalvelun ollessa auki)</span></span>
+              <span class="font-bold text-white text-base">8€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-brand-border/60">
+              <span class="text-slate-300">*10x kortti</span>
+              <span class="font-bold text-brand-orange text-base">60€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-brand-border/60">
+              <span class="text-slate-300">1kk</span>
+              <span class="font-bold text-white text-base">39€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-brand-border/60">
+              <span class="text-slate-300">3kk</span>
+              <span class="font-bold text-white text-base">105€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-brand-border/60">
+              <span class="text-slate-300">6kk</span>
+              <span class="font-bold text-white text-base">190€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-2 border-b border-brand-border/60">
+              <span class="text-slate-300">12kk</span>
+              <span class="font-bold text-brand-orange text-base">350€</span>
+            </div>
+          </div>
+
+          <!-- Баннер про kulkukortti 05-24 -->
+          <div class="p-4 rounded-xl bg-brand-orangeSoft/60 border border-brand-orange/40 text-xs text-slate-300 leading-relaxed">
+            <span class="text-brand-orange font-bold block mb-1">Kulkukortilla 365 päivää vuodessa:</span>
+            Kaikilla kausikorteilla ja 10x-kortilla harjoittelet vuoden jokaisena päivänä klo 05:00 – 24:00.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- БЛОК 2 СО СКРИНШОТОВ 1 И 2: ПРАВИЛА ЗАМОРОЗКИ АБОНЕМЕНТОВ И ГОСТЕВОЙ ТРЕНИНГ -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+        
+        <!-- Заморозка карт -->
+        <div class="lg:col-span-7 clean-card p-6 sm:p-8 rounded-2xl space-y-4">
+          <div class="flex items-center gap-2 text-brand-orange font-mono text-xs font-bold uppercase">
+            <i class="fa-regular fa-snowflake"></i>
+            <span>Kausikorttien tauotus</span>
+          </div>
+
+          <p class="text-sm text-slate-200 font-medium">
+            Kausikortit voidaan aina tauottaa loman/sairasloman ajaksi.
+          </p>
+
+          <div class="space-y-2 text-xs font-mono text-slate-300 bg-black/60 p-4 rounded-xl border border-brand-border">
+            <div class="text-white font-bold">ILMOITATHAN KORTTISI JÄÄDYTTÄMISEN AINA ENNEN LOMAA TAI SAIRASLOMASI ALUSSA.</div>
+            <div class="text-red-400">EMME KORVAA JÄLKIKÄTEEN ILMOITETTUA LOMAA.</div>
+            <div class="text-brand-orange">MINIMI KORVAUSAIKA 1 VIIKKO.</div>
+          </div>
+        </div>
+
+        <!-- Тренер / физиотерапевт / друг -->
+        <div class="lg:col-span-5 clean-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2 text-brand-orange font-mono text-xs font-bold uppercase">
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Vierailijat & oma valmentaja</span>
+            </div>
+            
+            <h3 class="font-heading font-bold text-base text-white">
+              Haluatko tuoda PT:n, fysioterapeutin tai ystäväsi mukaan salille?
+            </h3>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Tämä onnistuu meillä <strong class="text-brand-orange font-mono text-base">6€</strong> kertamaksulla päivystysaikoina.
+            </p>
+          </div>
+
+          <div>
+            <a href="index.html" class="inline-flex items-center gap-2 text-brand-orange hover:text-white font-mono font-bold text-xs underline underline-offset-4 transition">
+              <span>Katso ajankohtaiset tarjoukset etusivulta.</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- БЛОК 3 СО СКРИНШОТОВ 2 И 3: СПОСОБЫ ОПЛАТЫ (MAKSUTAVAT) И ПОДАРОЧНЫЕ КАРТЫ (LAHJAKORTIT) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+        
+        <!-- Способы оплаты -->
+        <div class="lg:col-span-7 clean-card p-6 sm:p-8 rounded-2xl space-y-5">
+          <div class="flex items-center gap-2 text-brand-orange font-mono text-xs font-bold uppercase">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>Maksutavat paikan päällä</span>
+          </div>
+
+          <h3 class="font-heading font-extrabold text-xl text-white">Maksutavat</h3>
+
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Voit maksaa meillä paikan päällä käteisellä, pankki- tai luottokortilla.
+          </p>
+
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Voit maksaa myös Smartum liikunta- ja kulttuuriseteleillä tai Smartum-mobiililla, Tyky-Kuntoseteleillä ja E-Passilla, sekä Edenred-sovelluksella, Edenred-saldokortilla tai virike-seteleillä.
+          </p>
+
+          <div class="p-4 rounded-xl bg-red-950/30 border border-red-500/30 text-xs text-red-200 space-y-2">
+            <div class="font-bold flex items-center gap-1.5 text-red-300">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span>HUOM! Liikuntaetu- mobiilisovelluksilla voi maksaa ainoastaan paikan päällä.</span>
+            </div>
+            <p class="text-slate-300">
+              Ethän tee maksua etukäteen kotona. Finnbodyn setelit eivät kelpaa meillä maksuvälineeksi.
+            </p>
+          </div>
+        </div>
+
+        <!-- Подарочные сертификаты -->
+        <div class="lg:col-span-5 clean-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between space-y-4">
+          <div class="space-y-4">
+            <div class="flex items-center gap-2 text-brand-orange font-mono text-xs font-bold uppercase">
+              <i class="fa-solid fa-gift"></i>
+              <span>Lahjaksi läheiselle</span>
+            </div>
+
+            <h3 class="font-heading font-extrabold text-xl text-white">Lahjakortit</h3>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Meiltä voit ostaa myös lahjakortteja palveluillemme. Lahjakortit voit ostaa joko paikan päältä vastaanotosta, tai voit ostaa lahjakortin myös etänä.
+            </p>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Laita viestiä <a href="mailto:info@sporttikuja.fi" class="text-brand-orange font-bold hover:underline">info@sporttikuja.fi</a> niin laitamme teille maksutiedot paluuviestissä. Kun maksu näkyy tilillämme, lähetämme lahjakortin teille sähköpostissa, jonka voit itse tulostaa.
+            </p>
+
+            <div class="p-3 rounded-lg bg-black/60 border border-brand-border text-xs font-mono text-slate-300">
+              Lahjakortin voimassaoloaika <strong class="text-white">6kk</strong>.
+            </div>
+          </div>
+
+          <a href="mailto:info@sporttikuja.fi" class="px-5 py-2.5 bg-brand-surface hover:bg-brand-orange text-white text-xs font-semibold rounded block text-center border border-brand-border transition">
+            Tilaa lahjakortti sähköpostitse
+          </a>
+        </div>
+
+      </div>
+
+      <!-- БЛОК 4 СО СКРИНШОТОВ 3 И 4: HENKILÖKOHTAINEN VALMENNUS -->
+      <div class="clean-card p-6 sm:p-10 rounded-2xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-brand-border">
+          <div>
+            <span class="font-mono text-xs text-brand-orange font-semibold uppercase block mb-1">Personal Training & Ruokavaliot</span>
+            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+              Henkilökohtainen valmennus
+            </h2>
+          </div>
+          <a href="valmennus.html" class="px-4 py-2 bg-brand-surface hover:bg-brand-orange text-white text-xs font-semibold rounded border border-brand-border transition self-start sm:self-auto">
+            Katso valmentajien esittelyt →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3 font-mono text-xs sm:text-sm">
+          <div class="flex justify-between items-center py-2.5 border-b border-brand-border/60">
+            <span class="text-slate-300">Ohjelma+ ohjaus (salin asiakkaille)</span>
+            <span class="font-bold text-brand-orange text-base">90€</span>
+          </div>
+
+          <div class="flex justify-between items-center py-2.5 border-b border-brand-border/60">
+            <span class="text-slate-300">Ohjelma+ ohjaus (muille)</span>
+            <span class="font-bold text-white text-base">105€</span>
+          </div>
+
+          <div class="flex justify-between items-center py-2.5 border-b border-brand-border/60">
+            <span class="text-slate-300">Ohjelma+ 3 ohjausta (salin asiakkaille)</span>
+            <span class="font-bold text-brand-orange text-base">240€</span>
+          </div>
+
+          <div class="flex justify-between items-center py-2.5 border-b border-brand-border/60">
+            <span class="text-slate-300">Ohjelma+ 3 ohjausta (muille)</span>
+            <span class="font-bold text-white text-base">295€</span>
+          </div>
+
+          <div class="flex justify-between items-center py-2.5 border-b border-brand-border/60">
+            <span class="text-slate-300">5 ohjausta (74€/kerta)</span>
+            <span class="font-bold text-white text-base">370€</span>
+          </div>
+
+          <div class="flex justify-between items-center py-2.5 border-b border-brand-border/60">
+            <span class="text-slate-300">10 ohjausta (70€/kerta)</span>
+            <span class="font-bold text-brand-orange text-base">700€</span>
+          </div>
+
+          <div class="flex justify-between items-center py-2.5 border-b border-brand-border/60">
+            <span class="text-slate-300">Pariohjaus (1h)</span>
+            <span class="font-bold text-white text-base">110€</span>
+          </div>
+
+          <div class="flex justify-between items-center py-2.5 border-b border-brand-border/60">
+            <span class="text-slate-300">Ulkopuolinen PT</span>
+            <span class="font-bold text-white text-base">6€/kerta</span>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-brand-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs">
+          <p class="text-slate-300">
+            <strong class="text-brand-orange font-semibold">Ruokavaliot ja ravintovalmennukset</strong> yhteistyössä PT Kristiina Kivistön kanssa.
+          </p>
+          <a href="mailto:info@sporttikuja.fi" class="px-5 py-2.5 bg-brand-orange hover:bg-brand-orangeHover text-white font-semibold rounded transition whitespace-nowrap">
+            Kysy lisää valmennuksesta
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="bg-[#050608] py-12 text-xs text-slate-500 border-t border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-brand-border">
+        <div class="font-heading font-black text-white text-base tracking-tight">
+          SPORTTI<span class="text-brand-orange">KUJA</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#" class="hover:text-white transition">Tietosuojaseloste</a>
+          <a href="#" class="hover:text-white transition">Verkkokaupan toimitusehdot</a>
+          <a href="#" class="hover:text-white transition">Oiva-raportit</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
+        <div>Kotisivut yritykselle toteutti Geeky Panda.</div>
+        <div>© <span id="yearSpanH"></span> Sporttikuja. Kaikki oikeudet pidätetään.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yearSpanH').textContent = new Date().getFullYear();
+
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobLinks = document.querySelectorAll('.mob-link');
+
+    if (mobileBtn && mobileDrawer) {
+      mobileBtn.addEventListener('click', () => { mobileDrawer.classList.toggle('hidden'); });
+      mobLinks.forEach(link => { link.addEventListener('click', () => mobileDrawer.classList.add('hidden')); });
+    }
+  </script>
+</body>
+</html>
