@@ -101,10 +101,14 @@
         <a href="in-english.html" class="text-slate-500 hover:text-white transition-colors">In English</a>
       </div>
 
-      <div class="flex items-center gap-4">
-        <div class="hidden sm:flex items-center gap-3 text-slate-400 text-sm border-r border-brand-border pr-4">
-          <a href="https://facebook.com" target="_blank" rel="noreferrer" class="hover:text-brand-orange transition"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" class="hover:text-brand-orange transition"><i class="fa-brands fa-instagram"></i></a>
+      <div class="flex items-center gap-3 sm:gap-4">
+        <div class="hidden sm:flex items-center gap-3 text-slate-300 text-sm border-r border-brand-border pr-3 sm:pr-4">
+          <a href="https://www.facebook.com/share/1CKntLqKZS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="hover:text-brand-orange transition p-1" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/sporttikuja?exln=MXhvNGN6ZmdsNGR0ZA==" target="_blank" rel="noopener noreferrer" class="hover:text-brand-orange transition p-1" aria-label="Instagram">
+            <i class="fa-brands fa-instagram text-base"></i>
+          </a>
         </div>
 
         <a href="hinnasto.html" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-brand-surface hover:bg-brand-orange text-white text-xs font-semibold border border-brand-border transition-colors group">
@@ -118,16 +122,29 @@
       </div>
     </div>
 
-    <div id="mobileDrawer" class="hidden xl:hidden bg-brand-surface border-b border-brand-border px-5 py-4 space-y-2.5 text-sm font-medium">
-      <a href="index.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Etusivu</a>
-      <a href="kuntosali.html" class="block py-1 text-brand-orange font-semibold mob-link">Kuntosali</a>
-      <a href="valmennus.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Valmennus</a>
-      <a href="kuntonyrkkeily.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntonyrkkeily</a>
-      <a href="kuntoutus.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Kuntoutus</a>
-      <a href="hinnasto.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Hinnasto</a>
-      <a href="ajankohtaista.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Ajankohtaista</a>
-      <a href="yhteystiedot.html" class="block py-1 text-slate-300 hover:text-brand-orange mob-link">Yhteystiedot</a>
-      <a href="in-english.html" class="block py-1 text-slate-400 mob-link">In English</a>
+    <div id="mobileDrawer" class="hidden xl:hidden bg-[#121316] border-b border-brand-border px-6 py-2 text-[15px] font-sans divide-y divide-white/10">
+      <a href="kuntosali.html" class="block py-3 text-brand-orange font-semibold mob-link">Kuntosali</a>
+      <a href="valmennus.html" class="block py-3 text-slate-200 hover:text-brand-orange mob-link">Valmennus</a>
+      <a href="kuntonyrkkeily.html" class="block py-3 text-slate-200 hover:text-brand-orange mob-link">Kuntonyrkkeily</a>
+      <a href="kuntoutus.html" class="block py-3 text-slate-200 hover:text-brand-orange mob-link">Kuntoutus</a>
+      <a href="hinnasto.html" class="block py-3 text-slate-200 hover:text-brand-orange mob-link">Hinnasto</a>
+      <a href="ajankohtaista.html" class="block py-3 text-slate-200 hover:text-brand-orange mob-link">Ajankohtaista</a>
+      <a href="yhteystiedot.html" class="flex items-center justify-between py-3 text-slate-200 hover:text-brand-orange mob-link">
+        <span>Yhteystiedot</span>
+        <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+      </a>
+      <a href="in-english.html" class="block py-3 text-slate-200 hover:text-brand-orange mob-link">In English</a>
+      <a href="https://www.facebook.com/share/1CKntLqKZS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="block py-3 text-slate-300 hover:text-brand-orange transition">
+        <i class="fa-brands fa-facebook-f text-base"></i>
+      </a>
+      <a href="https://www.instagram.com/sporttikuja?exln=MXhvNGN6ZmdsNGR0ZA==" target="_blank" rel="noopener noreferrer" class="block py-3 text-slate-300 hover:text-brand-orange transition">
+        <i class="fa-brands fa-instagram text-base"></i>
+      </a>
+      <a href="hinnasto.html" class="block py-3 text-slate-200 hover:text-brand-orange mob-link">Verkkokauppa</a>
+      <a href="hinnasto.html" class="relative inline-flex items-center py-3 text-slate-200 hover:text-brand-orange mob-link">
+        <i class="fa-solid fa-cart-shopping text-lg"></i>
+        <span class="absolute top-1.5 left-3.5 flex items-center justify-center w-4 h-4 rounded-full bg-slate-600 text-[9px] font-mono font-bold text-white">0</span>
+      </a>
     </div>
   </nav>
 
@@ -265,15 +282,45 @@
               </p>
             </div>
 
-            <div class="clean-card p-6 sm:p-8 rounded-xl space-y-3">
-              <div class="flex items-center gap-2 text-brand-orange font-mono text-xs font-bold uppercase">
-                <i class="fa-solid fa-broom"></i>
-                <span>Yhteisö & järjestys</span>
+            <!-- БЛОК С ОБНОВЛЕНИЕМ: 2 НОВЫХ ФОТО С ПОДПИСЯМИ -->
+            <div class="clean-card p-6 sm:p-8 rounded-xl space-y-6">
+              <div class="space-y-3">
+                <div class="flex items-center gap-2 text-brand-orange font-mono text-xs font-bold uppercase">
+                  <i class="fa-solid fa-broom"></i>
+                  <span>Yhteisö & järjestys</span>
+                </div>
+                <h4 class="font-heading font-bold text-base text-white">Pidetään sali viihtyisänä yhdessä:</h4>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Siivoamme kuntosalia päivystysaikojen sisällä. Muistattehan laittaa painot takaisin paikoilleen ja roskat roskikseen, sillä emme ole täällä kokoajan paikalla.
+                </p>
               </div>
-              <h4 class="font-heading font-bold text-base text-white">Pidetään sali viihtyisänä yhdessä:</h4>
-              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Siivoamme kuntosalia päivystysaikojen sisällä. Muistattehan laittaa painot takaisin paikoilleen ja roskat roskikseen, sillä emme ole täällä kokoajan paikalla.
-              </p>
+
+              <!-- СЕТКА ИЗ 2 ФОТО -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <!-- Фото 1: LUX-sisäilmanpuhdistimet -->
+                <div class="space-y-2">
+                  <div class="rounded-xl overflow-hidden border border-brand-border bg-black/60 group">
+                    <img src="lux-puhdistimet.jpg" 
+                         alt="LUX-sisäilmanpuhdistimet" 
+                         class="w-full h-48 sm:h-52 object-cover object-center group-hover:scale-105 transition duration-500">
+                  </div>
+                  <p class="text-xs font-mono font-bold text-slate-200">
+                    LUX-sisäilmanpuhdistimet
+                  </p>
+                </div>
+
+                <!-- Фото 2: Isofan-tuulettimet -->
+                <div class="space-y-2">
+                  <div class="rounded-xl overflow-hidden border border-brand-border bg-black/60 group">
+                    <img src="isofan-tuulettimet.jpg" 
+                         alt="Isofan-tuulettimet" 
+                         class="w-full h-48 sm:h-52 object-cover object-center group-hover:scale-105 transition duration-500">
+                  </div>
+                  <p class="text-xs font-mono font-bold text-slate-200 leading-snug">
+                    2026 nyrkkeilysaliin ja cardiosaliin tuli uudet Isofan-tuulettimet jenkeistä
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
